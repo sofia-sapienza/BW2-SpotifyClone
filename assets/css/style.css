@@ -3,3 +3,12 @@
     height: 300px;
     overflow: auto;
 }
+
+/* sidebar attività amici */
+.name-friend{
+font-size: 12px;
+}
+
+.description-friend{
+    font-size: 10px;
+}
