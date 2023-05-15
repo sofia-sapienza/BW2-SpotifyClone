@@ -4,6 +4,10 @@
     overflow: auto;
 }
 
+.list-playlist{
+    list-style-type: none;
+}
+
 /* sidebar attività amici */
 .name-friend{
 font-size: 12px;
