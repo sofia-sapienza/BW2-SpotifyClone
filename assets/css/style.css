@@ -1,18 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+/* sidebar */
+.cuore {
+    background: rgb(19, 0, 36);
+    background: linear-gradient(133deg, rgba(19, 0, 36, 1) 0%, rgba(89, 81, 160, 1) 24%, rgba(137, 111, 142, 1) 72%);
+}
+
+.ciao {
+    background: rgb(19, 0, 36);
+    background: linear-gradient(133deg, rgba(19, 0, 36, 1) 0%, rgba(81, 160, 99, 1) 24%, rgba(111, 142, 119, 1) 100%);
+}
+
+.sidebar{
+    background-color: #000000;
+}
+
 .scroll-bar {
     width: 100%;
     height: 300px;
     overflow: auto;
 }
 
-.list-playlist{
+.list-playlist {
     list-style-type: none;
 }
 
-/* sidebar attività amici */
-.name-friend{
-font-size: 12px;
+.list-playlist li{
+    padding: 0.3em;
 }
 
-.description-friend{
-    font-size: 10px;
+/* sidebar attività amici */
+.sidebar-amici{
+    background-color: #000000;
+}
+
+.name-friend {
+    font-size: 1em;
+}
+
+.description-friend {
+    font-size: 0.7em;
+}
+
+/* --- MAIN CENTRALE --- */
+.sezione-centrale{
+    background-color: #202020;
+}
+
+.chevron-icon{
+    background-color: #000000;
+    border-radius: 50%;
+    padding: 0.4em 0.5em 0.4em 0.5em;
 }
