@@ -1,29 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
-
 
   <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-3 bg-dark text-light p-5">COLONNA 1
-                <p>HOME</p>
-                <p>CERCA</p>
-                <p>LA TUA LIBRERIA</p>
-            </div>
-            <div class="col-xl-6 bg-success text-light p-5">COLONNA 2</div>
-            <div class="col-xl-3 bg-danger text-light p-5">COLONNA 3</div>
+      <div class="row">
+        <!-- sidebar -->
+        <div class="col-xl-3 bg-dark text-light">
+          <div>
+            <p><i class="bi bi-three-dots"></i></p>
+            <p><i class="bi bi-house-door"></i>HOME</p>
+            <p><i class="bi bi-search"></i>CERCA</p>
+            <p><i class="bi bi-collection"></i></i>LA TUA LIBRERIA</p>
+          </div>
+
+          <div>
+            <p><i class="bi bi-plus-square"></i>Crea playlist</p>
+            <p><i class="bi bi-suit-heart"></i>Brani che ti piacciono</p>
+            <p> <i class="bi bi-bookmark"></i>I tuoi episodi</p>
+          </div>
+          <hr>
+          <div class="scroll-bar">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quia mollitia inventore aliquid rem placeat. Tempora quidem eius corporis totam eum animi in vitae deleniti quam quis? Dolorum, veniam exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque excepturi maxime, rem accusamus quos quisquam expedita! Eum obcaecati quibusdam explicabo molestiae minima nesciunt, nam consectetur deleniti cumque nostrum repellendus optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sit accusantium qui iste facilis labore vel, obcaecati blanditiis adipisci, atque velit totam quasi, minus amet? Quia ea saepe tempora aut?
+          </div>
         </div>
+
+        <!-- contenuto centrale -->
+        <div class="col-xl-7 bg-success text-light">COLONNA MAIN CENTRALE</div>
+        <!-- siderab amici -->
+        <div class="col-xl-2 bg-dark text-light">
+          <div>
+            <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+              <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+              <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+            </svg><i class="bi bi-x-lg"></i></h6>
+          </div>
+
+          <div>
+            <!-- card attività amici -->
+            <!-- <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="..." class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Greta Zavagno<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></h5>
+                    <p class="card-text">Rosso relativo • Tiziano Ferro</p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <section class="sez1">
+              <div class="num">03</div>
+                <div class="nome-title-date">
+                  <div class="name"><img src="assets/imgs/image11.jpeg">Tom Cooper</div>
+                  <div class="title"><b>How I Learned to Love My Breasts Even Though One Is A Horcrux For Voldemort</b></div>
+                  <div class="date">Oct 26·2 min read</div>
+              </div>
+            </section>
+          </div>
+
+
+        </div>
+      </div>
     </div>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
