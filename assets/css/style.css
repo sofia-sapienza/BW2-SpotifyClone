@@ -20,7 +20,7 @@ body {
     background: linear-gradient(133deg, rgba(19, 0, 36, 1) 0%, rgba(81, 160, 99, 1) 24%, rgba(111, 142, 119, 1) 100%);
 }
 
-.sidebar{
+.sidebar {
     background-color: #000000;
 }
 
@@ -34,12 +34,12 @@ body {
     list-style-type: none;
 }
 
-.list-playlist li{
+.list-playlist li {
     padding: 0.3em;
 }
 
 /* sidebar attività amici */
-.sidebar-amici{
+.sidebar-amici {
     background-color: #000000;
 }
 
@@ -52,12 +52,29 @@ body {
 }
 
 /* --- MAIN CENTRALE --- */
-.sezione-centrale{
+.sezione-centrale {
     background-color: #202020;
 }
 
-.chevron-icon{
+.chevron-icon {
     background-color: #000000;
     border-radius: 50%;
     padding: 0.4em 0.5em 0.4em 0.5em;
+}
+
+
+/* BUONASERA-G */
+
+.titolo-playlist {
+    padding-left: 12px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: rgba(255, 250, 250, 0.133);
+    position: relative;
+    border: none;
+    color: white;
+    margin-right: 20px;
+
 }
