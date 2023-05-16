@@ -14,15 +14,14 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <!-- sidebar -->
+      <!--------------------------------------------SIDEBAR------------------------------------------->
       <div class="col-xl-3 text-light pt-2 sidebar">
         <div class="mb-5">
           <p><i class="bi bi-three-dots"></i></p>
           <a href="./home.html" style="text-decoration: none; color: white;">
             <p><i class="bi bi-house-door me-2"></i>Home</p>
           </a>
-          <p id="sparire"><i id="cerca" id="faiComparireInput" onclick=" faiComparireInputFunction()" role="button"
-              class="bi bi-search me-2"></i>Cerca</p>
+          <p id="sparire" id="faiComparireInput" onclick="faiComparireInputFunction()" role="button"><i id="cerca" class="bi bi-search me-2"></i>Cerca</p>
           <form class="d-flex mb-2" id="search" role="search">
             <input class="form-control me-2" type="search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Cerca</button>
@@ -30,6 +29,7 @@
           <p><i class="bi bi-collection me-2"></i></i>La tua libreria</p>
         </div>
 
+        <!--PLAYLIST-->
         <div>
           <p><i class="bi bi-plus-square me-2 bg-secondary p-1 rounded-1"></i>Crea playlist</p>
           <p><i class="bi bi-suit-heart me-2 p-1 rounded-1 cuore"></i>Brani che ti piacciono</p>
@@ -65,7 +65,7 @@
           </div>
         </div>
 
-        <!-- card annunci -->
+        <!--------------------------------------------------------------------- ANNUNCIO--------------------------------------------------- -->
         <div class="container-fluid p-0 mt-3">
           <div class="container-annunci">
             <div class="image-annunci">
@@ -87,7 +87,7 @@
           </div>
         </div>
         <!-- SEZIONE BUONASERA -->
-        <section class="buonasera w-100">
+        <section class="buonasera">
           <div>
             <h5 id="saluto" class=" titolo-playlist p-0 pb-3 pt-3"></h5>
           </div>

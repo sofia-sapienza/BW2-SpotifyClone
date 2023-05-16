@@ -41,7 +41,9 @@ for (let i = 0; i < playlistNames.length; i++) {
   const elementoLi = document.createElement("li");
   elementoLi.innerText = playlistNames[i];
   listaDaPopulare.appendChild(elementoLi);
+  elementoLi.classList.add('li-item');
 }
+
 
 
 
