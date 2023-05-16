@@ -67,3 +67,82 @@ body {
     border-top: 1px solid #7B7B7B;
     border-bottom: 1px solid #7B7B7B;
 }
+
+
+/*_____ANNUNCI_______________________________________________________________________________*/
+.container-annunci{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.image-annunci img {
+    width: 180px;
+}
+
+.image-annunci {
+    margin-right: 10px;
+    max-width: fit-content;
+    margin-right: 0;
+}
+
+
+.custom-button{
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #1ed760;
+    transition: all 0.7s ease-in-out;
+    color: black;
+}
+
+.btn-play:hover{
+    transform: scale(1.1);
+    background-color: #1ed760;
+    color: black;
+}
+
+.btn-salva {
+    color: #1ed760;
+    background-color: black;
+    margin-left: 20px;
+}
+
+.btn-salva:hover {
+    background-color: #1ed760;
+    color: black;
+    transform: scale(1.1);
+
+}
+.btn-nascondi{
+    transition: all 0.7s ease-in-out;
+}
+
+.btn-nascondi:hover{
+    transform: scale(1.1);
+}
+
+.album-nascondi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-nascondi p{
+    margin: 0;
+}
+
+.nascondi-annunci{
+    background-color: #222222;
+    color: #606060;
+    padding: 3px 7px;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+/*____________________________________________________________________________________________*/

@@ -42,3 +42,11 @@ for (let i = 0;  i < playlistNames.length; i++) {
   elementoLi.innerText = playlistNames[i];
   listaDaPopulare.appendChild(elementoLi);
 }
+
+
+//nascondi annunci
+const annunci = document.querySelector('.container-annunci');
+const btnAnnunci = document.querySelector('.nascondi-annunci');
+btnAnnunci.addEventListener('click', function() {
+    annunci.classList.add('d-none');
+})
