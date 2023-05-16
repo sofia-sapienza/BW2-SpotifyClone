@@ -250,22 +250,38 @@
     </div>
     <!-- PLAYER -->
     <div class="row">
-      <div class="col-xl-12 p-3 text-light d-flex justify-content-between player fixed-bottom">
-        <div>canzone in riproduzione generata con JS</div>
-        <div class="d-flex flex-column">
-          <div class="d-flex justify-content-between">
+      <div class="col-xl-12 p-1 text-light d-flex justify-content-around align-items-center player fixed-bottom">
+        <div>
+          <div class="song-infos">
+            <div class="image-container">
+                <img src="./assets/imgs/main/image-11.jpg" alt=""/>
+            </div>
+            <div class="song-description">
+                <p class="title">Imagine Dragons</p>
+                <p class="artist">Mercury</p>
+            </div>
+        </div>
+        </div>
+        <div class="d-flex flex-column align-items-center provaS" style="width: 100%;">
+          <div class="d-flex justify-content-between" style="width: 30%;">
             <i class="bi bi-shuffle text-success"></i>
-            <i class="bi bi-caret-left-fill"></i>
-            <i class="bi bi-caret-right-square-fill"></i>
-            <i class="bi bi-caret-right-fill"></i>
+            <div>
+              <i class="bi bi-caret-left-fill pe-1"></i>
+              <i class="bi bi-caret-right-square-fill"></i>
+              <i class="bi bi-caret-right-fill ps-1"></i>
+            </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-repeat text-success" viewBox="0 0 16 16">
               <path
                 d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
             </svg>
           </div>
-          <div>
-            <input type="range" name="range" id="myProgressBar" min="0" max="100">
+          <div class="progress-container">
+            <span>0:49</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span>3:15</span>
           </div>
         </div>
         <div>icone varie</div>

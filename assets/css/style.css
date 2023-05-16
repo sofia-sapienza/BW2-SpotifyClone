@@ -21,7 +21,7 @@ body {
     background: linear-gradient(133deg, rgba(19, 0, 36, 1) 0%, rgba(81, 160, 99, 1) 24%, rgba(111, 142, 119, 1) 100%);
 }
 
-.sidebar{
+.sidebar {
     background-color: #000000;
 }
 
@@ -35,12 +35,12 @@ body {
     list-style-type: none;
 }
 
-.list-playlist li{
+.list-playlist li {
     padding: 0.3em;
 }
 
 /* sidebar attività amici */
-.sidebar-amici{
+.sidebar-amici {
     background-color: #000000;
 }
 
@@ -54,65 +54,61 @@ body {
 
 /* ____MAIN CENTRALE____ */
 
-.chevron-icon{
+.chevron-icon {
     background-color: #000000;
     border-radius: 50%;
     padding: 0.4em 0.5em 0.4em 0.5em;
 }
 
 /* altro di ciò che ti piace */
-.dropdown-toggle{
+.dropdown-toggle {
     background-color: black;
     border: none;
     position: fixed;
     top: 2%;
     right: 18%;
-} 
+}
 
-.sezione-centrale h2{
+.sezione-centrale h2 {
     font-size: 15px;
     font-weight: bold;
- }
+}
 
- .sezione-centrale #homeAltroCheTiPiace{
+.sezione-centrale #homeAltroCheTiPiace {
 
     margin-top: 20%;
- }
- 
- #homeAltroCheTiPiace{
+}
+
+#homeAltroCheTiPiace {
     overflow: auto;
- }
- #homeAltroCheTiPiace .card-title{
+}
+
+#homeAltroCheTiPiace .card-title {
     font-size: 0.8em;
     color: white;
- }
-#homeAltroCheTiPiaceCard a{
+}
+
+#homeAltroCheTiPiaceCard a {
     text-decoration: none;
 }
- #homeAltroCheTiPiace .card{
-    background-color:#343232;
- }
 
- .cardsAltroCheTiPiace a{
+#homeAltroCheTiPiace .card {
+    background-color: #343232;
+}
+
+.cardsAltroCheTiPiace a {
 
     text-decoration: none;
- }
+}
 
- .inputCompare{
+.inputCompare {
     display: block;
- }
-
-/* --- ROW PLAYER --- */
-
-.player{
-    background-color: #202020;
-    border-top: 1px solid #7B7B7B;
-    border-bottom: 1px solid #7B7B7B;
 }
+
 
 
 /*____ANNUNCI____*/
-.container-annunci{
+.container-annunci {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -133,7 +129,7 @@ body {
 }
 
 
-.custom-button{
+.custom-button {
     border-radius: 20px;
     padding-left: 35px;
     padding-right: 35px;
@@ -142,7 +138,7 @@ body {
     color: black;
 }
 
-.btn-play:hover{
+.btn-play:hover {
     transform: scale(1.1);
     background-color: #1ed760;
     color: black;
@@ -160,11 +156,12 @@ body {
     transform: scale(1.1);
 
 }
-.btn-nascondi{
+
+.btn-nascondi {
     transition: all 0.7s ease-in-out;
 }
 
-.btn-nascondi:hover{
+.btn-nascondi:hover {
     transform: scale(1.1);
 }
 
@@ -174,11 +171,11 @@ body {
     align-items: center;
 }
 
-.album-nascondi p{
+.album-nascondi p {
     margin: 0;
 }
 
-.nascondi-annunci{
+.nascondi-annunci {
     background-color: #222222;
     color: #606060;
     padding: 3px 7px;
@@ -200,4 +197,78 @@ body {
     color: white;
     margin-right: 20px;
     flex: 1 33.333%;
+}
+
+/* ____ROW PLAYER____*/
+
+.player {
+    background-color: #202020;
+    border-top: 1px solid #7B7B7B;
+    border-bottom: 1px solid #7B7B7B;
+}
+
+.progress-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.progress-bar{
+    height: 4px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #ccc4;
+}
+.progress{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #999;
+}
+
+.progress-bar:hover .progress{
+    background-color:#1ed760;
+}
+.progress-bar:hover .progress::after{
+    content: "";
+    position: absolute;
+    --size: 1em;
+    width: 4.5em;
+    height: 4.5em;
+    right: 0;
+    border-radius: 50%;
+    background-color: #ddd;
+    transform: translate(50%, calc(2px - 50%));
+}
+
+/* canzone in riproduzione */
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.image-container {
+    --size: 4.5em;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.song-description p {
+    margin: 0.2em;
+}
+.title:hover,
+.artist:hover {
+    text-decoration: underline;
+}
+.artist{
+    color: var(--secondary-color);
 }
