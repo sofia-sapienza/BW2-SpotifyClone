@@ -131,3 +131,22 @@ cerca.addEventListener('click', (e) => {
 
 console.log(cerca)
 console.log(search)
+
+// ____SEZIONE BUONASERA____ //
+// function generaSaluto() {
+  var oraCorrente = new Date().getHours();
+  var saluto;
+
+  if (oraCorrente >= 6 && oraCorrente < 12) {
+    saluto = "Buongiorno";
+  } else if (oraCorrente >= 12 && oraCorrente < 18) {
+    saluto = "Buon pomeriggio";
+  } else if (oraCorrente >= 18 && oraCorrente < 24) {
+    saluto = "Buonasera";
+  } 
+
+
+  document.getElementById("saluto").innerHTML = saluto;
+
+
+  generaSaluto();
