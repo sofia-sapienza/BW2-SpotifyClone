@@ -61,3 +61,43 @@ body {
     border-radius: 50%;
     padding: 0.4em 0.5em 0.4em 0.5em;
 }
+
+/*HomePage-Colonna Centrale-Altro di ciò che ti piace*/
+.dropdown-toggle{
+    background-color: black;
+    border: none;
+} 
+
+.sezione-centrale h2{
+    font-size: 15px;
+    font-weight: bold;
+ }
+
+ .sezione-centrale #homeAltroCheTiPiace{
+
+    margin-top: 20%;
+ }
+ 
+ #homeAltroCheTiPiace{
+    overflow: auto;
+ }
+ #homeAltroCheTiPiace .card-title{
+    font-size: 10px;
+    
+    color: white;
+ }
+#homeAltroCheTiPiaceCard a{
+    text-decoration: none;
+}
+ #homeAltroCheTiPiace .card{
+    background-color: #000000;
+ }
+
+ .cardsAltroCheTiPiace a{
+
+    text-decoration: none;
+ }
+
+ .inputCompare{
+    display: block;
+ }

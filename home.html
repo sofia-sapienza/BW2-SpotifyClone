@@ -1,119 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
 
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- sidebar -->
-        <div class="col-xl-3 text-light pt-2 sidebar">
-          <div class="mb-5">
-            <p><i class="bi bi-three-dots"></i></p>
-            <p><i class="bi bi-house-door me-2"></i>Home</p>
-            <p><i class="bi bi-search me-2"></i>Cerca</p>
-            <p><i class="bi bi-collection me-2"></i></i>La tua libreria</p>
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="icon" href="data:image/png;base64,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">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-xl-3 text-light pt-2 sidebar">
+        <div class="mb-5">
+          <p><i class="bi bi-three-dots"></i></p>
+          <a href="./home.html" style="text-decoration: none; color: white;"><p><i class="bi bi-house-door me-2"></i>Home</p></a> 
+          <p id="sparire"><i id="cerca" id="faiComparireInput" onclick=" faiComparireInputFunction()" role="button"
+              class="bi bi-search me-2"></i>Cerca</p>
+          <form class="d-flex mb-2" id="search" role="search">
+            <input class="form-control me-2" type="search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Cerca</button>
+          </form>
+          <p><i class="bi bi-collection me-2"></i></i>La tua libreria</p>
+        </div>
+
+        <div>
+          <p><i class="bi bi-plus-square me-2 bg-secondary p-1 rounded-1"></i>Crea playlist</p>
+          <p><i class="bi bi-suit-heart me-2 p-1 rounded-1 cuore"></i>Brani che ti piacciono</p>
+          <p> <i class="bi bi-bookmark me-2 p-1 rounded-1 ciao"></i>I tuoi episodi</p>
+        </div>
+        <hr>
+        <div class="scroll-bar">
+          <ul class="list-playlist p-0" id="list-playlist">
+            <!-- qui gli elementi <li> verranno generati da Javascript -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- MAIN CENTRALE -->
+
+
+      <div class="col-xl-7 text-light pt-3 sezione-centrale">
+        <div >
           <div>
-            <p><i class="bi bi-plus-square me-2 bg-secondary p-1 rounded-1"></i>Crea playlist</p>
-            <p><i class="bi bi-suit-heart me-2 p-1 rounded-1 cuore"></i>Brani che ti piacciono</p>
-            <p> <i class="bi bi-bookmark me-2 p-1 rounded-1 ciao"></i>I tuoi episodi</p>
+            <i class="bi bi-chevron-left chevron-icon"></i>
+            <i class="bi bi-chevron-right ms-2 chevron-icon"></i>
           </div>
-          <hr>
-          <div class="scroll-bar">
-            <ul class="list-playlist p-0" id="list-playlist">
-              <!-- qui gli elementi <li> verranno generati da Javascript -->
-            </ul>
+          <div class="d-flex justify-content-end">
+            <div class="dropdown show mb-5">
+              <a class="btn btn-secondary dropdown-toggle badge badge-pill p-0" href="#" role="button"
+                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="./assets/imgs/main/download.jpg" class="rounded-circle" width="20px">
+                Maccio Capatonda
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- MAIN CENTRALE -->
-        <div class="col-xl-7 text-light pt-3 sezione-centrale">
-          <i class="bi bi-chevron-left chevron-icon"></i>
-          <i class="bi bi-chevron-right ms-2 chevron-icon"></i>
+        <div style="width: 100%; height: 250px; background-color: yellowgreen;">
+          <h1>VIOLA</h1>
         </div>
-        <!-- siderab amici -->
-        <div class="col-xl-2 text-light sidebar-amici">
-          <div class="mt-3 mb-5">
-            <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add ms-5" viewBox="0 0 16 16">
-              <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-              <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+        <div style="width: 100%; height: 200px; background-color: wheat">
+          <h1>Buonasera</h1>
+
+        </div>
+        <div id="homeAltroCheTiPiace" class="mt-3" style="height: 300px;">
+          <h2>Altro di ciò che ti piace</h2>
+          <div class="d-flex flex-wrap" id="homeAltroCheTiPiaceCards"></div>
+        </div>
+      </div>
+
+
+
+      <!-- siderab amici -->
+      <div class="col-xl-2 text-light sidebar-amici">
+        <div class="mt-3 mb-5">
+          <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-person-add ms-5" viewBox="0 0 16 16">
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+              <path
+                d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
             </svg><i class="bi bi-x-lg"></i></h6>
-          </div>
-          <!-- prima amica -->
-          <div>
-            <div class="d-flex">
-              <div class="me-2">
-                <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="name-friend"><b>Greta Zavagno</b><span class="ps-3">4 ore</span></h6>
-                <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
-                <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>EP III</p>
-              </div>
+        </div>
+        <!-- prima amica -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2">
+              <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Greta Zavagno</b><span class="ps-3">4 ore</span></h6>
+              <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
+              <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>EP III</p>
             </div>
           </div>
-          <!-- secondo amico -->
-          <div>
-            <div class="d-flex">
-              <div class="me-2">
-                <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="name-friend"><b>Sofia Sapienza</b><span class="ps-3">4 ore</span></h6>
-                <p class="description-friend mb-1">Aimed to Kill • Jade LeMac</p>
-                <p class="description-friend"><i class="bi bi-vinyl me-1"></i>Aimed to Kill</p>
-              </div>
+        </div>
+        <!-- secondo amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2">
+              <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Sofia Sapienza</b><span class="ps-3">4 ore</span></h6>
+              <p class="description-friend mb-1">Aimed to Kill • Jade LeMac</p>
+              <p class="description-friend"><i class="bi bi-vinyl me-1"></i>Aimed to Kill</p>
             </div>
           </div>
-          <!-- terzo amico -->
-          <div>
-            <div class="d-flex">
-              <div class="me-2">
-                <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="name-friend"><b>Gabriel Toncelli</b><span class="ps-3">8 ore</span></h6>
-                <p class="description-friend mb-1">New Kings • Sleeping Wolf</p>
-                <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>Twint Badass Mood</p>
-              </div>
+        </div>
+        <!-- terzo amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2">
+              <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Gabriel Toncelli</b><span class="ps-3">8 ore</span></h6>
+              <p class="description-friend mb-1">New Kings • Sleeping Wolf</p>
+              <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>Twint Badass Mood</p>
             </div>
           </div>
-          <!-- quarto amico -->
-          <div>
-            <div class="d-flex">
-              <div class="me-2">
-                <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-              </div>
-              <div class="d-flex flex-column">
-                <h6 class="name-friend"><b>Sante Calderisi</b><span class="ps-3">2 ore</span></h6>
-                <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
-                <p class="description-friend"><i class="bi bi-vinyl me-1"></i>EP III</p>
-              </div>
+        </div>
+        <!-- quarto amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2">
+              <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Sante Calderisi</b><span class="ps-3">2 ore</span></h6>
+              <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
+              <p class="description-friend"><i class="bi bi-vinyl me-1"></i>EP III</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/JS/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="./assets/JS/home.js"></script>
 
-  </body>
+</body>
+
 </html>
