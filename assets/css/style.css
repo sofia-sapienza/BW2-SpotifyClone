@@ -1,18 +1,64 @@
+
+nav, .playlist, .music-play, .colonna-centrale{
+    background-color: #151515;
+
+}
+
+
 .scroll-bar {
-    width: 100%;
-    height: 300px;
-    overflow: auto;
+    /* height: 200px; */
+    
 }
 
 .list-playlist{
     list-style-type: none;
+    width: 100%;
+    height: 350px;
+    overflow: auto;
 }
 
+.sidebar-dx, .sidebar-sx{
+    background-color: black;
+}
 /* sidebar attività amici */
 .name-friend{
 font-size: 12px;
 }
 
+.name-friend span{
+    font-size: 10px;
+}
+
 .description-friend{
     font-size: 10px;
+}
+
+.music-play{
+    height: 100px;
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+}
+
+/*Carosello next e prev*/
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 1rem;
+}
+
+.carousel-control-next {
+     right:85%;
+     
+}
+
+.carousel-control-prev {
+    left: -5%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top:-150px;
+}
+
+.dropdown-toggle{
+    background-color: black;
+    border: none;
 }
