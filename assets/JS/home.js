@@ -44,6 +44,7 @@ for (let i = 0; i < playlistNames.length; i++) {
 }
 
 
+
 //nascondi annunci
 const annunci = document.querySelector('.container-annunci');
 const btnAnnunci = document.querySelector('.nascondi-annunci');
@@ -54,7 +55,7 @@ btnAnnunci.addEventListener('click', function () {
 
 //Al caricmaneto della pagina vengono generate le card
 window.onload = () => {
-  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles%22")
+  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles")
     .then(queen => queen.json())
     .then(queenMusic => {
       queenMusic.data.forEach(element => {
@@ -102,7 +103,7 @@ cerca.addEventListener('click', (e) => {
   e.preventDefault()
 
   const query = document.querySelector('#search input').value
-
+  console.log(query)
   const url = `https://striveschool-api.herokuapp.com/api/deezer/search?q={${query}}`;
   fetch(url)
     .then(response => response.json())
@@ -111,15 +112,15 @@ cerca.addEventListener('click', (e) => {
       console.log(musica.data[0])
       musica.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
-   <div class="card m-2" style="heigth:50px">
-  <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
-  <div class="card-body">
-  <a href="./assets/artst.html/id="><h5 class="card-title">${element.album.title}</h5></a>
-  <a href="#"><h5 class="card-title">${element.artist.name}</h5></a>
-  
-  </div>
-  </div>
-  </div>`
+          <div class="card m-2" style="heigth:50px">
+            <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
+              <div class="card-body">
+                <a href="./assets/artist.html/id=""><h5 class="card-title">${element.album.title}</h5></a>
+                <a href="./assets/"><h5 class="card-title">${element.artist.name}</h5></a>
+
+              </div>
+          </div>
+        </div>`
       })
 
 
@@ -134,19 +135,18 @@ console.log(search)
 
 // ____SEZIONE BUONASERA____ //
 // function generaSaluto() {
-  var oraCorrente = new Date().getHours();
-  var saluto;
+var oraCorrente = new Date().getHours();
+var saluto;
 
-  if (oraCorrente >= 6 && oraCorrente < 12) {
-    saluto = "Buongiorno";
-  } else if (oraCorrente >= 12 && oraCorrente < 18) {
-    saluto = "Buon pomeriggio";
-  } else if (oraCorrente >= 18 && oraCorrente < 24) {
-    saluto = "Buonasera";
-  } 
-
-
-  document.getElementById("saluto").innerHTML = saluto;
+if (oraCorrente >= 6 && oraCorrente < 12) {
+  saluto = "Buongiorno";
+} else if (oraCorrente >= 12 && oraCorrente < 18) {
+  saluto = "Buon pomeriggio";
+} else if (oraCorrente >= 18 && oraCorrente < 24) {
+  saluto = "Buonasera";
+}
 
 
-  generaSaluto();
+document.getElementById("saluto").innerHTML = saluto;
+
+
