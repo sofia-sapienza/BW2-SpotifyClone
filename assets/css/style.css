@@ -327,6 +327,26 @@ body {
     background-color: #413817;
 }
 
+
+
+/*-----------------------PAGINA ARTISTA------------------------------*/
+.container-artista{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.col-12{
+    display: flex;
+    align-items: center;
+}
+
+.col-12 div {
+    margin-right: 10px;
+}
+
 .btn-circle {
     display: flex;
     justify-content: center;
@@ -345,3 +365,37 @@ body {
 .btn-circle:hover{
     transform: scale(1.1);
 }
+
+.btn-follow{
+    font-size: 13px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 3px 7px;
+    color: white;
+    transition: all 0.7s ease-in-out;
+
+}
+
+.btn-follow:hover{
+    cursor: pointer;
+    background-color: #1ed760;
+    border: #1ed760;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.play-follow div {
+    margin-right: 15px;
+}
+
+
+/* @media screen and (max-width: 998px) {
+    .sidebar-amici{
+        display: none;
+    }
+} */
+
+
+
+
