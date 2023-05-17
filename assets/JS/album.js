@@ -33,7 +33,7 @@ window.onload = () => {
         "Closer to Fine",
         "No song without you",
       ];
-      console.log(playlistNames);
+      
       
       //ho creato un riferimento alla lista <ul> con id list-playlist
       const listaDaPopulare = document.getElementById("list-playlist");
@@ -57,7 +57,6 @@ document.querySelector('#search input').style.display = 'none'
             .then(response => response.json())
             .then(artist => {
                
-               console.log(artist)
                 cover.innerHTML = `<div class="row g-0 pt-5 ms-3">
                 <div id="cover_Album" class="col-md-4 me-3" style="background-image: url('${artist.cover}');">
 
@@ -77,27 +76,28 @@ document.querySelector('#search input').style.display = 'none'
                 </div>
             </div>`
             })
-
+console.log(id)
             fetch("https://striveschool-api.herokuapp.com/api/deezer/album/"+id)
             .then(response => response.json())
             .then(tracks => {
                
-               console.log(tracks)
-
-               tracks.forEach((element,i) => {
-                document.getElementById('caratteristiche_singola_track').innerHTML = `<div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
+              
+                
+                console.log(tracks.tracks)
+               tracks.tracks.data.forEach((element,i) => {
+                document.getElementById('caratteristiche_singola_track').innerHTML += `<div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
                 <div class="d-flex">
                     <div class="me-3">${i+1}</div>
                     <div>
-                        <div><b>Titolo_Brano</b></div>
-                        <div>Nome_Artisti</div>
+                        <div><b>${element.title}</b></div>
+                        <div>${element.artist.name}</div>
                     </div>
                     
                 </div>
 
-                <div>Numero_riproduzioni</div>
-                <div>Durata_brano</div>
-            </div>`
+                <div>${element.rank}</div>
+                <div>${element.duration}</div>
+                </div>`
                });
                 
             })
