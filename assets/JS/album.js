@@ -77,4 +77,29 @@ document.querySelector('#search input').style.display = 'none'
                 </div>
             </div>`
             })
+
+            fetch("https://striveschool-api.herokuapp.com/api/deezer/album/"+id)
+            .then(response => response.json())
+            .then(tracks => {
+               
+               console.log(tracks)
+
+               tracks.forEach((element,i) => {
+                document.getElementById('caratteristiche_singola_track').innerHTML = `<div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex">
+                    <div class="me-3">${i+1}</div>
+                    <div>
+                        <div><b>Titolo_Brano</b></div>
+                        <div>Nome_Artisti</div>
+                    </div>
+                    
+                </div>
+
+                <div>Numero_riproduzioni</div>
+                <div>Durata_brano</div>
+            </div>`
+               });
+                
+            })
+
 }

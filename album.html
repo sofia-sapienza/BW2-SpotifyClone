@@ -44,57 +44,71 @@
             </div>
 
             <!-- MAIN CENTRALE -->
-            <div class="col-xl-7 text-light p-0 container">
+            <div class="col-xl-7 text-light p-0 container" style="position: relative; background: rgb(231,195,60);
+            background: linear-gradient(180deg, rgba(231,195,60,1) 5%, rgba(18,18,18,1) 60%); ">
                 <!-- Sezione Centrale -->
                 <div class="pt-3 ps-3" style="background: rgb(231,195,60);">
                     <i class="bi bi-chevron-left chevron-icon"></i>
                     <i class="bi bi-chevron-right ms-2 chevron-icon"></i>
-        
-                  </div>
-                <section id="cover" >
+
+                </div>
+                <section id="cover">
                     <div id="card-cover" class="card p-0 m-0">
-                        
+
                     </div>
                 </section>
+                <section id="tracks_container" class="container p-4"
+                    style="height: 500px; width: 100%; background-color: rgb(18, 18, 18, 0.2);position: absolute; top: 40%;">
+                    <div id="tracks" style="height: 100%; width: 100%;">
+                        <div id="tracks_play" style="width: 100%; height: 50px;" class="d-flex align-items-center mb-4">
+                            <div>
+                                <button type="button" class="btn-circle me-3">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                                  </svg>
+                                </button>
+                              </div>
+                            <!-- <i class="bi bi-play-fill me-3 fs-1"style="border-radius: 100%; background-color: #1ED760; color: black;"></i> -->
+                                <i class="bi bi-heart me-3 fs-5 "></i><i class="bi bi-box-arrow-down me-3 fs-5"></i>
+                                <i class="bi bi-three-dots fs-5"></i>
+                        </div>
+                        <div id="caratteristiche_tracks" style="width: 100%; font-size: 0.8em; border-bottom: 1px solid white; opacity: 0.5;" class="d-flex justify-content-between mb-3">
+                            <div class="d-flex">
+                                <div class="me-3">#</div>
+                                <div>TITOLO</div>
+                            </div>
 
+                            <div>RIPRODUZIONE</div>
+                            <div><i class="bi bi-clock"></i></div>
+                        </div>
+                        <div id="caratteristiche_singola_track"></div>
+                        <div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="d-flex">
+                                <div class="me-3">#</div>
+                                <div>
+                                    <div><b>Titolo_Brano</b></div>
+                                    <div>Nome_Artisti</div>
+                                </div>
+                                
+                            </div>
+
+                            <div>Numero_riproduzioni</div>
+                            <div>Durata_brano</div>
+                        </div>
+                    </div>
+
+                </section>
                 <!-- dropdown utente -->
                 <div class="dropdown show">
-                    <a class="btn btn-secondary dropDown_Album dropdown-toggle badge badge-pill rounded-pill p-0 pe-1" href="#" role="button"
-                      id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="./assets/imgs/main/download.jpg" class="rounded-circle" width="20px">
-                      Maccio Capatonda
+                    <a class="btn btn-secondary dropDown_Album dropdown-toggle badge badge-pill rounded-pill p-0 pe-1"
+                        href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <img src="./assets/imgs/main/download.jpg" class="rounded-circle" width="20px">
+                        Maccio Capatonda
                     </a>
-                  </div>
-
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
             </div>
-
-
-
-
-
-
-            <!-- siderab amici -->
+           <!-- siderab amici -->
             <div class="col-xl-2 text-light sidebar-amici">
                 <div class="mt-3 mb-5">
                     <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

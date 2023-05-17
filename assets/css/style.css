@@ -205,12 +205,12 @@ body {
 
 
 
+
 /*------------------------ALBUM PAGE-----------------------*/
 
 #cover{
     height: 300px; 
-    background: rgb(231,195,60);
-background: linear-gradient(180deg, rgba(231,195,60,1) 20%, rgba(18,18,18,1) 100%); 
+    
     margin: 0 auto;
 }
 
@@ -242,4 +242,23 @@ background: linear-gradient(180deg, rgba(231,195,60,1) 20%, rgba(18,18,18,1) 100
 
 .dropDown_Album{
     background-color: #413817;
+}
+
+.btn-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1ed760;
+    color: black;
+    font-size: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+  }
+
+.btn-circle:hover{
+    transform: scale(1.1);
 }
