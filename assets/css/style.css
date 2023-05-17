@@ -300,7 +300,7 @@ body {
 /*------------------------ALBUM PAGE-----------------------*/
 
 #cover {
-    height: 300px;
+    height: 430px;
     background: rgb(231, 195, 60);
     background: linear-gradient(180deg, rgba(231, 195, 60, 1) 20%, rgba(18, 18, 18, 1) 100%);
     margin: 0 auto;
