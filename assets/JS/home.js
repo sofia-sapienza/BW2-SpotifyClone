@@ -116,7 +116,7 @@ cerca.addEventListener('click', (e) => {
           <div class="card m-2" style="heigth:50px">
             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
               <div class="card-body">
-                <a href="./artisti.html?id=${element.artist.id}"><h5 class="card-title">${element.artist.name}</h5></a>
+                <a href="./artisti.html?artistiId=${element.artist.id}"><h5 class="card-title">${element.artist.name}</h5></a>
                 <a href="./album.html?id=${element.album.id}"><h5 class="card-title">${element.album.title}</h5></a>
 
               </div>

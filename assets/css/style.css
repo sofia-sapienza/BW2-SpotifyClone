@@ -39,6 +39,11 @@ body {
     padding: 0.3em;
 }
 
+.list-playlist li:hover{
+    background-color: #343232;
+    cursor: pointer;
+}
+
 /* sidebar attività amici */
 .sidebar-amici {
     background-color: #000000;
