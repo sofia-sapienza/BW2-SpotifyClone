@@ -201,3 +201,45 @@ body {
     margin-right: 20px;
     flex: 1 33.333%;
 }
+
+
+
+
+/*------------------------ALBUM PAGE-----------------------*/
+
+#cover{
+    height: 300px; 
+    background: rgb(231,195,60);
+background: linear-gradient(180deg, rgba(231,195,60,1) 20%, rgba(18,18,18,1) 100%); 
+    margin: 0 auto;
+}
+
+#p_Album{
+    font-size: 8px;
+}
+
+#title_Album{
+    font-size: 5em;
+    font-weight: 900;
+}
+
+#dettagli_Album{
+    font-size: 10px;
+    
+}
+#cover_Album{
+    background-color: white;
+    width: 150px;
+    height: 150px; 
+    box-shadow: 1px 0px 33px #5A4E20; 
+    background-size: contain;
+}
+
+.chevron-icon:hover{
+    cursor: pointer;
+    background-color: #7F6E2D;
+}
+
+.dropDown_Album{
+    background-color: #413817;
+}

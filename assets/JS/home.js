@@ -54,24 +54,24 @@ btnAnnunci.addEventListener('click', function () {
 
 
 //Al caricmaneto della pagina vengono generate le card
-window.onload = () => {
-  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles")
-    .then(queen => queen.json())
-    .then(queenMusic => {
-      queenMusic.data.forEach(element => {
-        cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
-          <div class="card m-2" style="heigth:50px">
-            <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
-              <div class="card-body">
-                <a href="./assets/artst.html/id="><h5 class="card-title">${element.album.title}</h5></a>
-                <a href="#"><h5 class="card-title">${element.artist.name}</h5></a>
+// window.onload = () => {
+//   fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles")
+//     .then(queen => queen.json())
+//     .then(queenMusic => {
+//       queenMusic.data.forEach(element => {
+//         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
+//           <div class="card m-2" style="heigth:50px">
+//             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
+//               <div class="card-body">
+//                 <a href="./assets/artst.html/id="><h5 class="card-title">${element.album.title}</h5></a>
+//                 <a href="#"><h5 class="card-title">${element.artist.name}</h5></a>
 
-              </div>
-          </div>
-        </div>`
-      })
-    })
-}
+//               </div>
+//           </div>
+//         </div>`
+//       })
+//     })
+// }
 
 //Gestione Cards della Homepage-"Altro che può piacere"
 //mi aggancio all'icona "cerca", al form e al button "Cerca"
@@ -109,14 +109,15 @@ cerca.addEventListener('click', (e) => {
     .then(response => response.json())
     .then(musica => {
       console.log(musica)
-      console.log(musica.data[0])
+      
+      
       musica.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
           <div class="card m-2" style="heigth:50px">
             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
               <div class="card-body">
-                <a href="./assets/artist.html/id=""><h5 class="card-title">${element.album.title}</h5></a>
-                <a href="./assets/"><h5 class="card-title">${element.artist.name}</h5></a>
+                <a href="./artisti.html?id=${element.artist.id}"><h5 class="card-title">${element.artist.name}</h5></a>
+                <a href="./album.html?id=${element.album.id}"><h5 class="card-title">${element.album.title}</h5></a>
 
               </div>
           </div>
@@ -134,7 +135,7 @@ console.log(cerca)
 console.log(search)
 
 // ____SEZIONE BUONASERA____ //
-// function generaSaluto() {
+function generaSaluto() {
 var oraCorrente = new Date().getHours();
 var saluto;
 
@@ -146,7 +147,9 @@ if (oraCorrente >= 6 && oraCorrente < 12) {
   saluto = "Buonasera";
 }
 
-
 document.getElementById("saluto").innerHTML = saluto;
+}
 
+
+generaSaluto();
 
