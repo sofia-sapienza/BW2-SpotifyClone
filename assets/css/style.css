@@ -510,3 +510,119 @@ body {
         display: none;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .container-deskotp{
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .scroll-bar{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .search-container {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .search-input:focus {
+    outline:auto;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 100px; 
+    border-radius: 10px; 
+    overflow: hidden;
+  }
+
+  .image-container:hover{
+    cursor: pointer;
+  }
+
+  .image-container img {
+    border-radius: 10px;
+    /* width: 200px;
+    height: 150px;   */
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    transform: rotate(20deg);
+    right: -5px;
+    bottom: 5px;
+  }
+
+  .image-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 5px;
+  }
+
+.podcast{
+    background-color: rgb(217, 78, 78);
+}
+
+.forYou{
+    background-color: rgb(39, 39, 88);
+}
+
+.new{
+    background-color: rgb(236, 122, 141);
+}
+
+.pop{
+    background-color: rgb(100, 187, 100);
+}
+
+.hipHop{
+    background-color: rgb(176, 83, 83);
+}
+
+.dance{
+    background-color: rgb(220, 114, 0);
+}
+
+.latina{
+    background-color: pink;
+}
+
+.classifiche{
+    background-color: rgb(246, 157, 246);
+}
