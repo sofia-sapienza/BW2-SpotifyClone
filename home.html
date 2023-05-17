@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid ">
     <div class="row">
       <!-- sidebar -->
       <div class="col-xl-3 text-light pt-2 sidebar">
@@ -66,7 +66,7 @@
         </div>
 
         <!-- card annunci -->
-        <div class="container-fluid p-0 mt-3">
+        <div class="container-fluid p-0 mt-3 card-song">
           <div class="container-annunci">
             <div class="image-annunci">
               <img src="./assets/imgs/main/image-1.jpg">
@@ -88,10 +88,14 @@
         </div>
         <!-- SEZIONE BUONASERA -->
         <section class="buonasera w-100">
-          <div>
-            <h5 id="saluto" class=" titolo-playlist p-0 pb-3 pt-3"></h5>
+          <div class="sezione-saluto">
+            <h5 id="saluto" class=" titolo-playlist p-0 pb-3 ptm-3"></h5>
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-clock-history"></i>
+            <i class="bi bi-gear"></i>
+
           </div>
-          <div class="d-flex flex-wrap justify-content-between">
+          <div class="div-card d-flex flex-wrap justify-content-between">
             <div class="card mb-3" style="max-width: 265px;">
               <div class="row g-0 ">
                 <div class=" immagine col-md-4">
@@ -166,7 +170,114 @@
               </div>
             </div>
           </div>
+
+
+          <!-- SEZIONE PLAYLIST MOBILE -->
+
+          <div class="div-card-mobile">
+            <div class="d-flex">
+              <div class="card-mobile mb-3" style="max-width: 250px;">
+                <div class="row g-0 ">
+                  <div class=" immagine col-md-4">
+                    <img src="assets/imgs/main/image-2.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="card-div">
+                    <div class="card-body">
+                      <p class="card-tex pt-4 ps-2">pov: la tua estate è un film</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-mobile mb-3" style="max-width: 265px;">
+                <div class="row g-0 ">
+                  <div class=" immagine col-md-4">
+                    <img src="assets/imgs/main/image-3.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class=" card-div col-md-8 pe-5">
+                    <div class="card-body p-0">
+                      <p class="card-tex pt-4 ps-2">Massima Concentrazione</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-mobile mb-3" style="max-width: 265px;">
+                <div class="row g-0 ">
+                  <div class=" immagine col-md-4">
+                    <img src="assets/imgs/main/image-4.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class=" card-div col-md-8 pe-5">
+                    <div class="card-body p-0">
+                      <p class="card-tex pt-4 ps-2">Peaceful Piano</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex">
+            <div class="card-mobile mb-3" style="max-width: 265px;">
+              <div class="row g-0 ">
+                <div class=" immagine col-md-4">
+                  <img src="assets/imgs/main/image-5.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class=" card-div col-md-8 pe-5">
+                  <div class="card-body p-0">
+                    <p class="card-tex pt-4 ps-2">lofi beats</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-mobile mb-3" style="max-width: 265px;">
+              <div class="row g-0 ">
+                <div class=" immagine col-md-4">
+                  <img src="assets/imgs/main/image-6.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class=" card-div col-md-8 pe-5">
+                  <div class="card-body p-0">
+                    <p class="card-tex pt-4 ps-2">Jazz Vibes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-mobile mb-3" style="max-width: 265px;">
+              <div class="row g-0 ">
+                <div class=" immagine col-md-4">
+                  <img src="assets/imgs/main/image-7.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class=" card-div col-md-8 pe-5">
+                  <div class="card-body p-0">
+                    <p class="card-text pt-4 ps-2">Caffè del Buongiorno</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         </section>
+
+        <!-- card annunci MOBILE-->
+
+        <div class="container-fluid p-0 mt-3 card-song-mobile">
+          <div class="container-annunci">
+            <div class="image-annunci">
+              <img src="./assets/imgs/main/image-1.jpg">
+            </div>
+            <div class="text container-fluid">
+              <div class="album-nascondi">
+                <p>ALBUM</p>
+              </div>
+              <h1>Viola (feat. Salmo)</h1>
+              <p>Fedez, Salmo</p>
+              <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
+              <div class="button-play">
+                <button type="button" class="btn btn-success custom-button btn-play">Play</button>
+                <button type="button" class="btn btn-outline-success custom-button btn-salva">Salva</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
 
         <!-- ALTRO CHE TI PIACE -->
         <section class="altroCheTiPiace">
@@ -249,7 +360,7 @@
       </div>
     </div>
     <!-- PLAYER -->
-    <div class="row">
+    <div class="row player-container">
       <div class="col-xl-12 p-3 text-light d-flex justify-content-between player fixed-bottom">
         <div>canzone in riproduzione generata con JS</div>
         <div class="d-flex flex-column">
@@ -270,13 +381,37 @@
         </div>
         <div>icone varie</div>
       </div>
-    </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-  <script src="./assets/JS/home.js"></script>
+
+    </div>
+
+
+    <div class="text-light sidebar-mobile">
+      <div class="container-sidebar-mobile">
+        <div class="d-flex flex-column align-items-center">
+          <a href="./home.html" style="text-decoration: none; color: white;">
+            <i class="bi bi-house-door me-2"></i>
+            <p class="m-0">Home</p>
+
+          </a>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <i id="cerca" id="faiComparireInput" role="button" class="bi bi-search me-2"></i>
+          <p id="sparire" class="m-0">Cerca</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+          <i class="bi bi-collection"></i>
+          <p class="m-0">La tua libreria</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+    <script src="./assets/JS/home.js"></script>
 
 </body>
 
