@@ -414,13 +414,6 @@ body {
 }
 
 
-/* @media screen and (max-width: 998px) {
-    .sidebar-amici{
-        display: none;
-    }
-} */
-
-
 /* MEDIA MOBILE */
 
 @media screen and (max-width: 481px) {
@@ -452,6 +445,7 @@ body {
 
     .sezione-saluto h5 {
         font-size: 25px;
+    
     }
 
     .sezione-saluto i {
@@ -467,8 +461,15 @@ body {
         display: none;
     }
 
+    
     .card-mobile {
-        width: 50%;
+       display: flex;
+       width: 50%;
+       background-color: rgba(255, 250, 250, 0.1);
+       border: none;
+       color: white;
+       margin-right: 20px;
+      
     }
 
     .container-sidebar-mobile {
@@ -495,6 +496,10 @@ body {
     .player-container {
         display: none;
     }
+
+    .player-desktop{
+        display: none;
+    }
 }
 
 
@@ -516,6 +521,12 @@ body {
     }
 
     .card-mobile {
+        display: none;
+    }
+    .musica-podcast{
+        display: none;
+    }
+    .player-mobile{
         display: none;
     }
 }
