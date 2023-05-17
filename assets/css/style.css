@@ -21,7 +21,7 @@ body {
     background: linear-gradient(133deg, rgba(19, 0, 36, 1) 0%, rgba(81, 160, 99, 1) 24%, rgba(111, 142, 119, 1) 100%);
 }
 
-.sidebar{
+.sidebar {
     background-color: #000000;
 }
 
@@ -35,12 +35,12 @@ body {
     list-style-type: none;
 }
 
-.list-playlist li{
+.list-playlist li {
     padding: 0.3em;
 }
 
 /* sidebar attività amici */
-.sidebar-amici{
+.sidebar-amici {
     background-color: #000000;
 }
 
@@ -54,56 +54,63 @@ body {
 
 /* ____MAIN CENTRALE____ */
 
-.chevron-icon{
+.chevron-icon {
     background-color: #000000;
     border-radius: 50%;
     padding: 0.4em 0.5em 0.4em 0.5em;
 }
 
 /* altro di ciò che ti piace */
-.dropdown-toggle{
+.dropdown-toggle {
     background-color: black;
     border: none;
     position: fixed;
     top: 2%;
     right: 18%;
-} 
+}
 
-.sezione-centrale h2{
+.sezione-centrale h2 {
     font-size: 15px;
     font-weight: bold;
- }
+}
 
- .sezione-centrale #homeAltroCheTiPiace{
+.sezione-centrale #homeAltroCheTiPiace {
 
     margin-top: 20%;
- }
- 
- #homeAltroCheTiPiace{
+}
+
+#homeAltroCheTiPiace {
     overflow: auto;
- }
- #homeAltroCheTiPiace .card-title{
+}
+
+#homeAltroCheTiPiace .card-title {
     font-size: 0.8em;
     color: white;
- }
-#homeAltroCheTiPiaceCard a{
+}
+
+#homeAltroCheTiPiaceCard a {
     text-decoration: none;
 }
- #homeAltroCheTiPiace .card{
-    background-color:#343232;
- }
 
- .cardsAltroCheTiPiace a{
+#homeAltroCheTiPiace .card {
+    background-color: #343232;
+}
+
+.cardsAltroCheTiPiace a {
 
     text-decoration: none;
- }
+}
 
- .inputCompare{
+.inputCompare {
     display: block;
- }
+}
+
+/* --- ROW PLAYER --- */
+
+
 
 /*____ANNUNCI____*/
-.container-annunci{
+.container-annunci {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -124,7 +131,7 @@ body {
 }
 
 
-.custom-button{
+.custom-button {
     border-radius: 20px;
     padding-left: 35px;
     padding-right: 35px;
@@ -133,7 +140,7 @@ body {
     color: black;
 }
 
-.btn-play:hover{
+.btn-play:hover {
     transform: scale(1.1);
     background-color: #1ed760;
     color: black;
@@ -151,11 +158,12 @@ body {
     transform: scale(1.1);
 
 }
-.btn-nascondi{
+
+.btn-nascondi {
     transition: all 0.7s ease-in-out;
 }
 
-.btn-nascondi:hover{
+.btn-nascondi:hover {
     transform: scale(1.1);
 }
 
@@ -165,11 +173,11 @@ body {
     align-items: center;
 }
 
-.album-nascondi p{
+.album-nascondi p {
     margin: 0;
 }
 
-.nascondi-annunci{
+.nascondi-annunci {
     background-color: #222222;
     color: #606060;
     padding: 3px 7px;
@@ -291,39 +299,41 @@ body {
 
 /*------------------------ALBUM PAGE-----------------------*/
 
-#cover{
-    height: 300px; 
-    
+#cover {
+    height: 300px;
+    background: rgb(231, 195, 60);
+    background: linear-gradient(180deg, rgba(231, 195, 60, 1) 20%, rgba(18, 18, 18, 1) 100%);
     margin: 0 auto;
 }
 
-#p_Album{
+#p_Album {
     font-size: 8px;
 }
 
-#title_Album{
+#title_Album {
     font-size: 5em;
     font-weight: 900;
 }
 
-#dettagli_Album{
+#dettagli_Album {
     font-size: 10px;
-    
+
 }
-#cover_Album{
+
+#cover_Album {
     background-color: white;
     width: 150px;
-    height: 150px; 
-    box-shadow: 1px 0px 33px #5A4E20; 
+    height: 150px;
+    box-shadow: 1px 0px 33px #5A4E20;
     background-size: contain;
 }
 
-.chevron-icon:hover{
+.chevron-icon:hover {
     cursor: pointer;
     background-color: #7F6E2D;
 }
 
-.dropDown_Album{
+.dropDown_Album {
     background-color: #413817;
 }
 
@@ -397,5 +407,101 @@ body {
 } */
 
 
+/* MEDIA MOBILE */
+
+@media screen and (max-width: 481px) {
+
+    .dropdown {
+        display: none;
+    }
+
+    .chevron-icon {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar-amici {
+        display: none;
+    }
+
+    .card-song {
+        display: none;
+    }
+
+    .sezione-saluto {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .sezione-saluto h5 {
+        font-size: 25px;
+    }
+
+    .sezione-saluto i {
+        font-size: 25px;
+        padding-left: 15px;
+    }
+
+    .sezione-saluto .bi-bell {
+        margin-left: 200px;
+    }
+
+    .card {
+        display: none;
+    }
+
+    .card-mobile {
+        width: 50%;
+    }
+
+    .container-sidebar-mobile {
+        display: flex;
+        justify-content: space-around;
 
 
+    }
+
+    .container-sidebar-mobile i {
+        font-size: 30px;
+
+    }
+
+
+    .container-annunci {
+        border-radius: 20px;
+    }
+
+    .button-play {
+        display: flex;
+    }
+
+    .player-container {
+        display: none;
+    }
+}
+
+
+
+
+/* MEDIA DESKTOP */
+
+@media screen and (min-width: 481px) {
+    .sezione-saluto i {
+        display: none;
+    }
+
+    .sidebar-mobile {
+        display: none;
+    }
+
+    .card-song-mobile {
+        display: none;
+    }
+
+    .card-mobile {
+        display: none;
+    }
+}
