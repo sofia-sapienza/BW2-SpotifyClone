@@ -155,7 +155,7 @@ body {
 .btn-salva {
     color: #1ed760;
     background-color: black;
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 
 .btn-salva:hover {
@@ -475,22 +475,15 @@ body {
     .container-sidebar-mobile {
         display: flex;
         justify-content: space-around;
-
-
     }
 
     .container-sidebar-mobile i {
         font-size: 30px;
-
     }
 
-
-    .container-annunci {
-        border-radius: 20px;
-    }
-
-    .button-play {
-        display: flex;
+    .image-annunci img {
+        width: 110px;
+        height: auto;
     }
 
     .player-container {
@@ -531,11 +524,11 @@ body {
     }
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     .container-deskotp{
         display: none;
     }
-}
+} */
 
 @media screen and (max-width:992px) {
     .scroll-bar{

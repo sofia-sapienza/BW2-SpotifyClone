@@ -21,8 +21,8 @@
           <a href="./home.html" style="text-decoration: none; color: white;">
             <p><i class="bi bi-house-door me-2"></i>Home</p>
           </a>
-          <p id="sparire"><i id="cerca" id="faiComparireInput" onclick=" faiComparireInputFunction()" role="button"
-              class="bi bi-search me-2"></i>Cerca</p>
+          <p id="sparire"><a href="search.html"><i id="cerca" id="faiComparireInput" onclick=" faiComparireInputFunction()" role="button"
+              class="bi bi-search me-2"></i>Cerca</a></p>
           <form class="d-flex mb-2" id="search" role="search">
             <input class="form-control me-2" type="search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Cerca</button>
@@ -80,7 +80,7 @@
               <p>Fedez, Salmo</p>
               <p>Ascolta il nuovo singolo di Fedez e Salmo!</p>
               <div class="button-play">
-                <button type="button" class="btn btn-success custom-button btn-play">Play</button>
+                <button type="button" class="btn btn-success custom-button">Play</button>
                 <button type="button" class="btn btn-outline-success custom-button btn-salva">Salva</button>
               </div>
             </div>
@@ -383,63 +383,7 @@
     </div>
 
     <!--MOBILE------------------------------------------------------------>
-    <div class="container-fluid cerca d-sm-none">
-      <h1 class="text-light">Cerca</h1>
-      <div class="search-container">
-          <input type="text" class="search-input" value="Cosa vuoi cercare?" onclick="this.value='';">
-      </div>
-
-      <div class="row justify-content-between g-3">
-          <div class="col-5 image-container podcast">
-              <div class="image-text">Podcast</div>
-              <img src="./assets/imgs/search/image-2.jpg" alt="Imagen">
-          </div>
-          <div class="col-5 image-container bg-primary forYou">
-              <a href="#">
-                  <div class="image-text">Create per te</div>
-                  <img src="./assets/imgs/search/image-47.jpg" alt="Imagen">
-              </a>
-          </div>
-          <div class="col-5 image-container new">
-              <a href="#">
-                  <div class="image-text">Nuove uscite</div>
-                  <img src="assets/imgs/search/image-42.png" alt="Imagen">
-              </a>
-          </div>
-          <div class="col-5 image-container pop">
-              <a href="#">
-                  <div class="image-text">Pop</div>
-                  <img src="assets/imgs/search/image-49.jpg" alt="Imagen">
-              </a>
-          </div>
-          <div class="col-5 image-container hipHop">
-              <a href="#">
-                  <div class="image-text">Hip-hop</div>
-                  <img src="assets/imgs/search/image-46.jpeg" alt="Imagen">
-              </a>
-          </div>
-          <div class="col-5 image-container dance">
-              <a href="#">
-                  <div class="image-text">Dance/<br>Elettronica</div>
-                  <img src="assets/imgs/search/image-33.jpg" alt="Imagen">
-              </a>
-          </div>
-          <div class="col-5 image-container latina">
-              <a href="#">
-                  <div class="image-text">Latina</div>
-                  <img src="assets/imgs/search/image-39.jpg" alt="Imagen">
-              </a>
-          </div>
-          <div class="col-5 image-container classifiche">
-              <a href="#">
-                  <div class="image-text">Classifiche</div>
-                  <img src="assets/imgs/search/image-10.jpg" alt="Imagen">
-              </a>
-          </div>
-      </div>
-  </div>
-
-
+    
     <!-- PLAYER -->
     <div class="row">
       <div class="col-lg-12 p-2 text-light d-flex justify-content-around align-items-center player fixed-bottom">
