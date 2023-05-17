@@ -2,209 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- sidebar -->
-            <div class="col-md-3 text-light pt-2 sidebar">
-                <div class="mb-5">
-                    <p><i class="bi bi-three-dots"></i></p>
-                    <a href="./home.html" style="text-decoration: none; color: white;">
-                        <p><i class="bi bi-house-door me-2"></i>Home</p>
-                    </a>
-                    <p id="sparire"><i id="cerca" id="faiComparireInput" onclick=" faiComparireInputFunction()"
-                            role="button" class="bi bi-search me-2"></i>Cerca</p>
-                    <form class="d-flex mb-2" id="search" role="search">
-                        <input class="form-control me-2" type="search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Cerca</button>
-                    </form>
-                    <p><i class="bi bi-collection me-2"></i></i>La tua libreria</p>
-                </div>
-
-                <div>
-                    <p><i class="bi bi-plus-square me-2 bg-secondary p-1 rounded-1"></i>Crea playlist</p>
-                    <p><i class="bi bi-suit-heart me-2 p-1 rounded-1 cuore"></i>Brani che ti piacciono</p>
-                    <p> <i class="bi bi-bookmark me-2 p-1 rounded-1 ciao"></i>I tuoi episodi</p>
-                </div>
-                <hr>
-                <div class="scroll-bar">
-                    <ul class="list-playlist p-0" id="list-playlist">
-                        <!-- qui gli elementi <li> verranno generati da Javascript -->
-                    </ul>
-                </div>
-            </div>
-
-            <!-- MAIN CENTRALE -->
-            <div class="col-md-7 text-light p-0 container-fluid">
-                <!-- Sezione Centrale -->
-                <div class="container-artista">
-                  <div class="utente">
-                    <div class="pt-3 ps-3">
-                        <i class="bi bi-chevron-left chevron-icon"></i>
-                        <i class="bi bi-chevron-right ms-2 chevron-icon"></i>  
-                    </div>
-                    <!-- dropdown utente -->
-                    <div class="dropdown show">
-                        <a class="btn btn-secondary dropDown_Album dropdown-toggle badge badge-pill rounded-pill p-0 pe-1" href="#" role="button"
-                          id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="./assets/imgs/main/download.jpg" class="rounded-circle" width="20px">
-                          Maccio Capatonda
-                        </a>
-                    </div>
-                  </div>
-
-                  <div class="artista ps-4">
-                    <i class="bi bi-patch-check-fill text-primary"></i> Account verificato
-                    <h1><b>NOME ARTISTA</b></h1>
-                    <p>372827594 ascoltatori mensili</p>
-                  </div>
-                </div>
-
-                <div class="play-follow ps-3 d-flex align-items-center mb-5">
-                      <div>
-                        <button type="button" class="btn-circle">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                          <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
-                          </svg>
-                        </button>
-                      </div>
-                        <!-- <i class="bi bi-play-circle"></i> -->
-                        <div><button type="button" class="btn-follow">Following</button></div>
-                        <div><i class="bi bi-three-dots"></i></div>                      
-                </div>
-
-                <div class="row">
-                  <div class="col-12">
-                    <h4 class="ps-3">Popolari</h4>
-                  </div>
-                </div>
-
-                <div class="row mb-3 container-canzoni">
-                  <div class="col-sm-6 col-3 ps-3">
-                    <div class="d-flex justify-content-start align-items-center p-3">
-                      1
-                      <img src="assets/imgs/main/image-10.jpg" style="width: 30px; margin-left: 10px;">
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-3 justify-content-end align-self-center">
-                    4239492359854
-                  </div>
-                  <div class="col-sm-3 col-3 justify-content-end align-self-center">
-                    238758974398
-                  </div>
-                </div>
-                
-            </div>
-
-
-
-
-
-
-            <!-- siderab amici -->
-            <div class="col-lg-2 text-light sidebar-amici">
-                <div class="mt-3 mb-5">
-                    <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-add ms-5" viewBox="0 0 16 16">
-                            <path
-                                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                            <path
-                                d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
-                        </svg><i class="bi bi-x-lg"></i></h6>
-                </div>
-                <!-- prima amica -->
-                <div>
-                    <div class="d-flex">
-                        <div class="me-2">
-                            <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-                        </div>
-                        <div class="d-flex flex-column">
-                            <h6 class="name-friend"><b>Greta Zavagno</b><span class="ps-3">4 ore</span></h6>
-                            <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
-                            <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>EP III</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- secondo amico -->
-                <div>
-                    <div class="d-flex">
-                        <div class="me-2">
-                            <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-                        </div>
-                        <div class="d-flex flex-column">
-                            <h6 class="name-friend"><b>Sofia Sapienza</b><span class="ps-3">4 ore</span></h6>
-                            <p class="description-friend mb-1">Aimed to Kill • Jade LeMac</p>
-                            <p class="description-friend"><i class="bi bi-vinyl me-1"></i>Aimed to Kill</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- terzo amico -->
-                <div>
-                    <div class="d-flex">
-                        <div class="me-2">
-                            <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-                        </div>
-                        <div class="d-flex flex-column">
-                            <h6 class="name-friend"><b>Gabriel Toncelli</b><span class="ps-3">8 ore</span></h6>
-                            <p class="description-friend mb-1">New Kings • Sleeping Wolf</p>
-                            <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>Twint Badass Mood
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- quarto amico -->
-                <div>
-                    <div class="d-flex">
-                        <div class="me-2">
-                            <img src="./assets/imgs/main/image19.jpeg" class="rounded-circle" width="80%">
-                        </div>
-                        <div class="d-flex flex-column">
-                            <h6 class="name-friend"><b>Sante Calderisi</b><span class="ps-3">2 ore</span></h6>
-                            <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
-                            <p class="description-friend"><i class="bi bi-vinyl me-1"></i>EP III</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-md-3 text-light pt-2 sidebar">
+        <div class="mb-5">
+          <p><i class="bi bi-three-dots"></i></p>
+          <a href="./home.html" style="text-decoration: none; color: white;">
+            <p><i class="bi bi-house-door me-2"></i>Home</p>
+          </a>
+          <p id="sparire"><i id="cerca" id="faiComparireInput" onclick=" faiComparireInputFunction()" role="button"
+              class="bi bi-search me-2"></i>Cerca</p>
+          <form class="d-flex mb-2" id="search" role="search">
+            <input class="form-control me-2" type="search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Cerca</button>
+          </form>
+          <p><i class="bi bi-collection me-2"></i></i>La tua libreria</p>
         </div>
-        <!-- PLAYER -->
-        <div class="row">
-            <div class="col-xl-12 p-3 text-light d-flex justify-content-between player fixed-bottom">
-                <div>canzone in riproduzione generata con JS</div>
-                <div class="d-flex flex-column">
-                    <div class="d-flex justify-content-between">
-                        <i class="bi bi-shuffle text-success"></i>
-                        <i class="bi bi-caret-left-fill"></i>
-                        <i class="bi bi-caret-right-square-fill"></i>
-                        <i class="bi bi-caret-right-fill"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-repeat text-success" viewBox="0 0 16 16">
-                            <path
-                                d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <input type="range" name="range" id="myProgressBar" min="0" max="100">
-                    </div>
-                </div>
-                <div>icone varie</div>
-            </div>
+
+        <div>
+          <p><i class="bi bi-plus-square me-2 bg-secondary p-1 rounded-1"></i>Crea playlist</p>
+          <p><i class="bi bi-suit-heart me-2 p-1 rounded-1 cuore"></i>Brani che ti piacciono</p>
+          <p> <i class="bi bi-bookmark me-2 p-1 rounded-1 ciao"></i>I tuoi episodi</p>
         </div>
+        <hr>
+        <div class="scroll-bar">
+          <ul class="list-playlist p-0" id="list-playlist">
+            <!-- qui gli elementi <li> verranno generati da Javascript -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- MAIN CENTRALE -->
+      <div class="col-md-7 text-light p-0 container-fluid">
+        <!-- Sezione Centrale -->
+        <div class="container-artista">
+          <div class="utente">
+            <div class="pt-3 ps-3">
+              <i class="bi bi-chevron-left chevron-icon"></i>
+              <i class="bi bi-chevron-right ms-2 chevron-icon"></i>
+            </div>
+            <!-- dropdown utente -->
+            <div class="dropdown show">
+              <a class="btn btn-secondary dropDown_Album dropdown-toggle badge badge-pill rounded-pill p-0 pe-1"
+                href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="./assets/imgs/main/download.jpg" class="rounded-circle" width="20px">
+                Maccio Capatonda
+              </a>
+            </div>
+          </div>
+
+          <div class="artista ps-4">
+            <i class="bi bi-patch-check-fill text-primary"></i> Account verificato
+            <h1><b>NOME ARTISTA</b></h1>
+            <p>372827594 ascoltatori mensili</p>
+          </div>
+        </div>
+
+        <div class="play-follow ps-3 d-flex align-items-center mb-5">
+          <div>
+            <button type="button" class="btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+              </svg>
+            </button>
+          </div>
+          <!-- <i class="bi bi-play-circle"></i> -->
+          <div><button type="button" class="btn-follow">Following</button></div>
+          <div><i class="bi bi-three-dots"></i></div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <h4 class="ps-3">Popolari</h4>
+          </div>
+        </div>
+
+        <div class="row mb-3 container-canzoni">
+          <div class="col-sm-6 col-3 ps-3">
+            <div class="d-flex justify-content-start align-items-center p-3">
+              1
+              <img src="assets/imgs/main/image-10.jpg" style="width: 30px; margin-left: 10px;">
+            </div>
+          </div>
+          <div class="col-sm-3 col-3 justify-content-end align-self-center">
+            4239492359854
+          </div>
+          <div class="col-sm-3 col-3 justify-content-end align-self-center">
+            238758974398
+          </div>
+        </div>
+
+      </div>
+      <!--SIDEBAR ATTIVITA` AMICI-->
+      <div class="col-xl-2 text-light sidebar-amici">
+        <div class="mt-3 mb-5">
+          <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-person-add ms-5" viewBox="0 0 16 16">
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+              <path
+                d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
+            </svg><i class="bi bi-x-lg"></i></h6>
+        </div>
+        <!-- prima amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2 container-immagineAmici">
+              <img src="./assets/imgs/main/sante.png" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Sante Calderisi</b><span class="ps-3">4 ore</span></h6>
+              <p class="description-friend mb-1">In Camera • Yumi Zouma</p>
+              <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>EP III</p>
+            </div>
+          </div>
+        </div>
+        <!-- secondo amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2 container-immagineAmici">
+              <img src="./assets/imgs/main/icon-6007530_1280.webp" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Greta Zavagno</b><span class="ps-3">4 ore</span></h6>
+              <p class="description-friend mb-1">Aimed to Kill • Jade LeMac</p>
+              <p class="description-friend"><i class="bi bi-vinyl me-1"></i>Aimed to Kill</p>
+            </div>
+          </div>
+        </div>
+        <!-- terzo amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2 container-immagineAmici">
+              <img src="./assets/imgs/main/icon-5887126_1280.webp" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Sofia Sapienza</b><span class="ps-3">8 ore</span></h6>
+              <p class="description-friend mb-1">New Kings • Sleeping Wolf</p>
+              <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>Twint Badass Mood</p>
+            </div>
+          </div>
+        </div>
+        <!-- quarto amico -->
+        <div>
+          <div class="d-flex">
+            <div class="me-2 container-immagineAmici">
+              <img src="./assets/imgs/main/3219840.png" class="rounded-circle" width="80%">
+            </div>
+            <div class="d-flex flex-column">
+              <h6 class="name-friend"><b>Gabriel Toncelli</b><span class="ps-3">8 ore</span></h6>
+              <p class="description-friend mb-1">New Kings • Sleeping Wolf</p>
+              <p class="description-friend"><i class="bi bi-music-note-beamed me-1"></i>Twint Badass Mood</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- PLAYER -->
+    <div class="row">
+      <div class="col-xl-12 p-2 text-light d-flex justify-content-around align-items-center player fixed-bottom">
+        <!--container canzone in riproduzione-->
+        <div class="container-songPrincipale">
+          <div class="container-song">
+            <div class="container-imgPlayer">
+              <img src="./assets/imgs/main/image-11.jpg" alt="" />
+            </div>
+            <div class="song-descriptionPlayer ps-2">
+              <p class="titlePlayer"><b>Imagine Dragons</b></p>
+              <p class="artistPlayer">Mercury</p>
+            </div>
+            <div>
+              <i class="bi bi-heart ps-2"></i>
+            </div>
+          </div>
+        </div>
+        <!--container player-->
+        <div class=" container-player sdd-flex flex-column align-items-center">
+          <div class="d-flex justify-content-center fs-6">
+            <i class="colorIconPlayer bi bi-shuffle pe-5"></i>
+            <div>
+              <i class="bi bi-skip-start-fill pe-1"></i>
+              <i class="icon-play bi bi-caret-right-fill"></i>
+              <i class="bi bi-skip-end-fill ps-1"></i>
+            </div>
+            <i class="colorIconPlayer bi bi-arrow-repeat ps-5"></i>
+          </div>
+          <div class="progress-container pt-2">
+            <span>0:49</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span>3:15</span>
+          </div>
+        </div>
+        <!--container icone varie-->
+        <div class="d-flex align-items-center">
+          <i class="bi bi-mic pe-1"></i>
+          <i class="bi bi-list pe-1"></i>
+          <i class="bi bi-pc-display pe-1"></i>
+          <i class="bi bi-volume-up"></i>
+          <!--volume bar-->
+          <div>
+            <div class="volume-bar">
+              <i class="fas fa-volume-down"></i>
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+          <i class="bi bi-arrows-angle-expand ps-1"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="./assets/JS/artist.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="./assets/JS/artist.js"></script>
 
 </body>
 
