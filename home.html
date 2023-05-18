@@ -88,11 +88,15 @@
         </div>
         <!-- SEZIONE BUONASERA -->
         <section class="buonasera pt-3 w-100 ">
-          <div class="sezione-saluto">
-            <h5 id="saluto" class=" titolo-playlist p-0 pb-3 pt-m-3"></h5>
-            <i class="bi bi-bell"></i>
-            <i class="bi bi-clock-history"></i>
-            <i class="bi bi-gear"></i>
+          <div class="sezione-saluto d-flex justify-content-between">
+            <div>
+              <h5 id="saluto" class=" titolo-playlist p-0 pb-3 pt-m-3"></h5>
+            </div>
+            <div>
+              <i class="bi bi-bell "></i>
+              <i class="bi bi-clock-history ps-2"></i>
+              <i class="bi bi-gear ps-2"></i>
+            </div>
           </div>
 
           <div class="d-flex">
@@ -177,90 +181,33 @@
 
 
           <!-- SEZIONE PLAYLIST MOBILE -->
-
-          <div class="div-card-mobile">
+          <!--container principale playlist-->
+          <div class="containerPlaylist-mobile d-flex flex-column justify-content-center">
+            <!--prima sezione-->
             <div class="d-flex">
-              <div class="card-mobile mb-3" style="max-width: 250px;">
-                <div class="row g-0">
-                  <div class="card-body d-flex">
-                    <div class="immagine col-4">
-                      <img src="assets/imgs/main/image-2.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-div col-8">
-                      <p class="card-text pt-4 ps-2">pov: la tua estate è un film</p>
-                    </div>
-                  </div>
+              <!--prima card-->
+              <div class="cardContainer-mobile d-flex align-items-center">
+                <div class="containerImg-playlistMobile">
+                  <img src="./assets/imgs/main/image-2.jpg" class="imgPlaylist-mobile">
+                </div>
+                <div>
+                  <p class="ps-2">pov: la tua estate è un film</p>
                 </div>
               </div>
-              <div class="card-mobile mb-3" style="max-width: 250px;">
-                <div class="row g-0">
-                  <div class="card-body d-flex">
-                    <div class="immagine col-4">
-                      <img src="assets/imgs/main/image-3.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-div col-8">
-                      <p class="card-text pt-4 ps-2">Massimo Concentrazione</p>
-                    </div>
-                  </div>
+              <!--seconda card-->
+              <div class="d-flex align-items-center">
+                <div class="containerImg-playlistMobile">
+                  <img src="./assets/imgs/main/image-6.jpg" class="imgPlaylist-mobile">
+                </div>
+                <div>
+                  <p class="ps-2">Jazz Vibes</p>
                 </div>
               </div>
             </div>
-
-            <div class="d-flex ">
-
-              <div class="card-mobile mb-3" style="max-width: 250px;">
-                <div class="row g-0">
-                  <div class="card-body d-flex">
-                    <div class="immagine col-4">
-                      <img src="assets/imgs/main/image-4.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-div col-8">
-                      <p class="card-text pt-4 ps-2">Peaceful Piano</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-mobile mb-3" style="max-width: 250px;">
-                <div class="row g-0">
-                  <div class="card-body d-flex">
-                    <div class="immagine col-4">
-                      <img src="assets/imgs/main/image-5.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-div col-8">
-                      <p class="card-text pt-4 ps-2">Lo-fi</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex">
-
-              <div class="card-mobile mb-3" style="max-width: 250px;">
-                <div class="row g-0">
-                  <div class="card-body d-flex">
-                    <div class="immagine col-4">
-                      <img src="assets/imgs/main/image-6.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-div col-8">
-                      <p class="card-text pt-4 ps-2">Jazz Vibes</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-mobile mb-3" style="max-width: 250px;">
-                <div class="row g-0">
-                  <div class="card-body d-flex">
-                    <div class="immagine col-4">
-                      <img src="assets/imgs/main/image-7.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="card-div col-8">
-                      <p class="card-text pt-4 ps-2">Caffè del Buongiorno</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!--seconda sezione-->
+            <div class="d-flex"></div>
+            <!--terza sezione-->
+            <div class="d-flex"></div>
           </div>
         </section>
 
