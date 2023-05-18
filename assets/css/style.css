@@ -78,6 +78,9 @@ body {
     right: 18%;
 }
 
+.dropdown-toggle:hover{
+    background-color: rgba(111, 142, 119, 0.3);
+}
 .sezione-centrale h2 {
     font-size: 15px;
     font-weight: bold;
@@ -294,6 +297,34 @@ body {
     color: #1ed760;
 }
 
+/*Scroll infinito Traccia*/
+
+.container-scroll-text{
+    background-color: transparent;
+    max-width: 100px;
+    
+}
+.text-animation{
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    
+}
+
+.artistPlayer{
+    display: inline-block;
+
+    animation: scroll_animation 5s linear infinite;
+}
+
+@keyframes scroll_animation{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-50%,0,0);
+    }
+}
 /* barra volume */
 .volume-bar {
     display: flex;
@@ -345,12 +376,10 @@ body {
 
 .chevron-icon:hover {
     cursor: pointer;
-    background-color: #7F6E2D;
+    background-color: rgba(111, 142, 119, 0.2);
 }
 
-.dropDown_Album {
-    background-color: #413817;
-}
+
 
 
 
@@ -504,7 +533,7 @@ body {
 
     .containerPlayer-mobile{
         display: none;
-        background-color: #373737;
+        
     }
 }
 

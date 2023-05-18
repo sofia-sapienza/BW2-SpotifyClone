@@ -55,10 +55,15 @@ btnAnnunci.addEventListener('click', function () {
 
 //Al caricmaneto della pagina vengono generate le card
 window.onload = () => {
-  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles")
+  const array_artisti = ['Queen', 'Maneskin', 'Thasup','Beyoncè', 'Miley Cyrus', 'Beatles', 'Harry Styles', 'Bad Bunny', 'Rihanna', 'coldplay', 'Lucio Dalla', 'Elodie', 'Cardi B', 'Taylor Swift', 'Coez', 'Carl Brave', 'Frah Quintale', 'Maroon 5', 'Annalisa', 'Sfera Ebbasta', 'Pinguini tattici nucleari', 'Pavarotti', 'Cesare Cremonini', 'Jovanotti', 'Elisa', 'Travis Scott', 'Justin Bieber', 'Drake', 'Florence + The Machine', 'Blanco', 'Lady Gaga', 'JAY-Z', 'Raffaella Carrà', 'Britney Spears', 'Abba', 'Labrinth', 'Lazza', 'Franco Battiato', 'Avril Lavigne', 'Machine Gun Kelly', 'Nicki Minaj', 'Ed Sheeran', 'Salmo']
+  
+
+  const random_artist = array_artisti[Math.round(Math.random()*array_artisti.length)]
+  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+ random_artist)
     .then(queen => queen.json())
-    .then(queenMusic => {
-      queenMusic.data.forEach(element => {
+    .then(randomMusic => {
+      console.log(randomMusic)
+      randomMusic.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
           <div class="card m-2" style="heigth:50px">
             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">

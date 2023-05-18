@@ -84,12 +84,14 @@
 
 
             console.log(tracks.tracks)
+            
             tracks.tracks.data.forEach((element, i) => {
+                console.log(element.preview)
                 document.getElementById('caratteristiche_singola_track').innerHTML += `<div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
                 <div class="d-flex col-4">
                     <div class="me-3 ">${i + 1}</div>
                     <div>
-                       <a style="text-decoration: none; color: white;" href="#" onclick="avviaBrano('${element.title}', '${element.artist.name}','${element.album.cover_small}')"><div><b>${element.title}</b></div></a>
+                       <a style="text-decoration: none; color: white;" href="#" onclick="avviaBrano('${element.title.replaceAll("'", "‛")}', '${element.artist.name}','${element.album.cover_small}','${element.preview}')"><div><b>${element.title}</b></div></a>
                        <a style="text-decoration: none; color: white;" href="./artisti.html?id=${element.artist.id}"><div>${element.artist.name}</div></a>
                     </div>
                     
@@ -98,6 +100,7 @@
                 <div class="col-4 text-center" >${element.rank}</div>
                 <div class="col-4 text-end">${(element.duration / 60).toFixed(0)}:${((element.duration) % 60)<10? "0" + ((element.duration) % 60):((element.duration) % 60)}</div>
                 </div>`
+                
             });
 
         })
@@ -105,12 +108,17 @@
 
     console.log(id)
     
-    function avviaBrano(title, name_artist, img) {
-        
-        console.log(title, name_artist, img)
+    function avviaBrano(title, name_artist, img, preview) {
+        console.log(preview)
+   console.log(title)
        document.querySelector('.container-imgPlayer img').src = img
        document.querySelector('.titlePlayer b').innerText = name_artist  
        document.querySelector('.artistPlayer').innerText = title
+       document.getElementById('audio').innerHTML = `<audio controls autoplay>
+       
+       <source src='${preview}' type="audio/mpeg">
+       
+     </audio>`
     }
 
 
