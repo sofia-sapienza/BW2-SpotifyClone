@@ -480,66 +480,72 @@
 
 
     <!-- PLAYER -->
-    <div class="row player-desktop">
-      <div class="col-xl-12 p-2 text-light d-flex justify-content-around align-items-center player ">
-        <!--container canzone in riproduzione-->
-        <div class="container-songPrincipale">
-          <div class="container-song">
-            <div class="container-imgPlayer">
-              <img src="./assets/imgs/main/image-11.jpg" alt="" />
-            </div>
-            <div class="song-descriptionPlayer ps-2">
-              <p class="titlePlayer"><b>Imagine Dragons</b></p>
-              <div id="container-scroll-text">
-                <div id="text-animation_album">
-                  <p id="artistPlayer_album">Mercury</p>
-                </div>
+    <div class="row d-none d-md-block">
+      <div class="col-xl-12 p-2 text-light d-flex justify-content-around align-items-center player fixed-bottom">
+          <!--container canzone in riproduzione-->
+          <div class="container-songPrincipale">
+              <div class="container-song">
+                  <div class="container-imgPlayer">
+                      <img src="" alt="" />
+                  </div>
+                  <div class="song-descriptionPlayer ps-2">
+                      <p class="titlePlayer"><b></b></p>
+                      <div id="container-scroll-text">
+                          <div id="text-animation_album">
+                            <p id="artistPlayer_album"></p>
+                          </div>
+                        </div>
+                  </div>
+                  <div>
+                      <i class="bi bi-heart ps-2"></i>
+                  </div>
               </div>
-            </div>
-            <div>
-              <i class="bi bi-heart ps-2"></i>
-            </div>
           </div>
-        </div>
-        <!--container player-->
-        <div class=" container-player sdd-flex flex-column align-items-center">
-          <div class="d-flex justify-content-center fs-6">
-            <i class="colorIconPlayer bi bi-shuffle pe-5"></i>
-            <div>
-              <i class="bi bi-skip-start-fill pe-1"></i>
-              <i class="icon-play bi bi-caret-right-fill"></i>
-              <i class="bi bi-skip-end-fill ps-1"></i>
-            </div>
-            <i class="colorIconPlayer bi bi-arrow-repeat ps-5"></i>
-          </div>
-          <div class="progress-container pt-2">
-            <span>0:49</span>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-            <span>3:15</span>
-          </div>
-        </div>
-        <!--container icone varie-->
-        <div class="d-flex align-items-center">
-          <i class="bi bi-mic pe-1"></i>
-          <i class="bi bi-list pe-1"></i>
-          <i class="bi bi-pc-display pe-1"></i>
-          <i class="bi bi-volume-up"></i>
-          <!--volume bar-->
-          <div>
-            <div class="volume-bar">
-              <i class="fas fa-volume-down"></i>
-              <div class="progress-bar">
-                <div class="progress"></div>
+          <!--container player-->
+          <div class=" container-player sdd-flex flex-column align-items-center">
+              <div class="d-flex justify-content-center align-items-center fs-6">
+                  <i class="colorIconPlayer bi bi-shuffle pe-5"></i>
+                  <div class="d-flex align-items-center">
+                      <i class="bi bi-skip-start-fill pe-1"></i>
+                      <button type="button" class="btn-circle" id="button_play_album" >
+                          <svg xmlns="http://www.w3.org/2000/svg" id="container_play" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                              <path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                          </svg>
+                      </button>
+                      <!-- <i class="icon-play bi bi-caret-right-fill"></i> VECCHIO PLAY -->
+                      <div id="audio" class="d-none"></div>
+                      <i class="bi bi-skip-end-fill ps-1"></i>
+                  </div>
+                  <i class="colorIconPlayer bi bi-arrow-repeat ps-5"></i>
               </div>
-            </div>
+              <div class="progress-container pt-2">
+                  <span id="start_traccia">0:00</span>
+                  <div class="progress-bar">
+                      <div class="progress" id="progress_audio"></div>
+                  </div>
+                  <span id="end_traccia">0:30</span>
+              </div>
           </div>
-          <i class="bi bi-arrows-angle-expand ps-1"></i>
-        </div>
+          <!--container icone varie-->
+          <div class="d-flex align-items-center container_icone_player justify-content-end">
+              <i class="bi bi-mic pe-1"></i>
+              <i class="bi bi-list pe-1"></i>
+              <i class="bi bi-pc-display pe-1"></i>
+              <i class="bi bi-volume-up"></i>
+              <!--volume bar-->
+              <div>
+                  <div class="volume-bar">
+                      <i class="fas fa-volume-down"></i>
+                      <div class="progress-bar">
+                          <div class="progress"></div>
+                      </div>
+                  </div>
+              </div>
+              <i class="bi bi-arrows-angle-expand ps-1"></i>
+          </div>
       </div>
-    </div>
-
+  </div>
+</div>
 
     <!-- PLAYER  Mobile-->
     <div class="containerPlayer-mobile text-light p-3 mb-3    fs-4 rounded d-flex justify-content-around">

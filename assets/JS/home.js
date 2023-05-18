@@ -54,15 +54,27 @@ btnAnnunci.addEventListener('click', function () {
 
 
 //Al caricmaneto della pagina vengono generate le card
-window.onload = () => {
+
   const array_artisti = ['Queen', 'Maneskin', 'Thasup','Beyoncè', 'Miley Cyrus', 'Beatles', 'Harry Styles', 'Bad Bunny', 'Rihanna', 'coldplay', 'Lucio Dalla', 'Elodie', 'Cardi B', 'Taylor Swift', 'Coez', 'Carl Brave', 'Frah Quintale', 'Maroon 5', 'Annalisa', 'Sfera Ebbasta', 'Pinguini tattici nucleari', 'Pavarotti', 'Cesare Cremonini', 'Jovanotti', 'Elisa', 'Travis Scott', 'Justin Bieber', 'Drake', 'Florence + The Machine', 'Blanco', 'Lady Gaga', 'JAY-Z', 'Raffaella Carrà', 'Britney Spears', 'Abba', 'Labrinth', 'Lazza', 'Franco Battiato', 'Avril Lavigne', 'Machine Gun Kelly', 'Nicki Minaj', 'Ed Sheeran', 'Salmo']
   
-
-  const random_artist = array_artisti[Math.round(Math.random()*array_artisti.length)]
+  
+  const random_number = Math.round(Math.random()*array_artisti.length)
+  console.log(random_number)
+  const random_artist = array_artisti[random_number]
   fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+ random_artist)
     .then(queen => queen.json())
     .then(randomMusic => {
       console.log(randomMusic)
+      const random_number_track_home = Math.round(Math.random()*randomMusic.data.length)
+      console.log(random_number_track_home)
+      console.log(randomMusic.data[random_number_track_home])
+      console.log(randomMusic.data[random_number_track_home].title)
+      console.log(randomMusic.data[random_number_track_home].artist.name)
+      console.log(randomMusic.data[random_number_track_home].album.cover_small)
+      document.querySelector('.container-imgPlayer img').src = randomMusic.data[random_number_track_home].album.cover_small
+    document.querySelector('.titlePlayer b').innerText = randomMusic.data[random_number_track_home].artist.name
+    document.querySelector('#artistPlayer_album').innerText = randomMusic.data[random_number_track_home].title
+      
       randomMusic.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
           <div class="card m-2" style="heigth:50px">
@@ -76,7 +88,10 @@ window.onload = () => {
         </div>`
       })
     })
-}
+    
+    
+
+   
 
 //Gestione Cards della Homepage-"Altro che può piacere"
 //mi aggancio all'icona "cerca", al form e al button "Cerca"
