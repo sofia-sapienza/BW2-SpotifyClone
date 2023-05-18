@@ -540,6 +540,11 @@ html::-webkit-scrollbar {
         font-size: 25px;
     }
 
+
+    .containerPlayer-mobile{
+        display: none;
+        background-color: #373737;
+    }
 }
 
 
@@ -567,6 +572,18 @@ html::-webkit-scrollbar {
         display: none;
     }
     .player-mobile{
+        display: none;
+    }
+    .containerPlayer-mobile{
+        display: none;
+    }
+    .containerPlayer-mobile p{
+        display: none;
+    }
+    .containerPlayer-mobile i{
+        display: none;
+    }
+    .containerPlayer-mobile div{
         display: none;
     }
 }
