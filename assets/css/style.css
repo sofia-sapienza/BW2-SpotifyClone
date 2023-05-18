@@ -314,7 +314,7 @@ body {
 /*------------------------ALBUM PAGE-----------------------*/
 
 #cover {
-    height: 430px;
+    height: fit-content;
     background: rgb(231, 195, 60);
     background: linear-gradient(180deg, rgba(231, 195, 60, 1) 20%, rgba(18, 18, 18, 1) 100%);
     margin: 0 auto;
@@ -413,6 +413,7 @@ body {
 .play-follow div {
     margin-right: 15px;
 }
+
 
 
 /* MEDIA MOBILE */
@@ -517,15 +518,12 @@ body {
     .sezione-saluto i {
         display: none;
     }
-
     .sidebar-mobile {
         display: none;
     }
-
     .card-song-mobile {
         display: none;
     }
-
     .card-mobile {
         display: none;
     }
@@ -548,3 +546,34 @@ body {
         display: none;
     }
 }
+
+
+
+/*ALBUM MOBILE*/
+
+@media screen and (max-width: 1200px){
+    .sidebar-amici{
+        display: none;
+    }
+    .main-album{
+        width: 75%;
+    }
+    .dropdown-toggle {
+        background-color: black;
+        border: none;
+        position: fixed;
+        top: 2%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .sidebar{
+        display: none;
+    }
+    .main-album{
+        width: 100%;
+    }
+}
+
+

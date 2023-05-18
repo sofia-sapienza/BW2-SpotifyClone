@@ -66,7 +66,7 @@
                         <p id="p_Album" class="m-0">ALBUM</p>
                         <h5 id="title_Album" class="card-title">${artist.title}</h5>
                         <div id="dettagli_Album" class="d-flex">
-                            <div style="background-image: url('${artist.artist.picture_small}'); width: 20px;height: 20px; background-size: contain;" class="rounded-circle me-2"></div> 
+                            <div style="background-image: url('${artist.artist.picture_small}'); width: 20px;height: 20px; background-size: contain;" class="rounded-circle me-2"></div>
                             <p class="card-text me-2 mt-1"><b>${artist.artist.name}</b></p>
                             <p class="card-text me-2 mt-1">${artist.release_date.substr(0, 4)}</p>
                             <p class="card-text me-2 mt-1">${artist.nb_tracks} brani</p>
