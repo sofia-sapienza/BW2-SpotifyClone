@@ -367,11 +367,11 @@ html::-webkit-scrollbar {
 
 .chevron-icon:hover {
     cursor: pointer;
-    background-color: #7F6E2D;
+    background-color: #343232;
 }
 
 .dropDown_Album {
-    background-color: #413817;
+    background-color: black;
 }
 
 
