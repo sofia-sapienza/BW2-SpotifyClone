@@ -54,24 +54,24 @@ btnAnnunci.addEventListener('click', function () {
 
 
 //Al caricmaneto della pagina vengono generate le card
-// window.onload = () => {
-//   fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles")
-//     .then(queen => queen.json())
-//     .then(queenMusic => {
-//       queenMusic.data.forEach(element => {
-//         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
-//           <div class="card m-2" style="heigth:50px">
-//             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
-//               <div class="card-body">
-//                 <a href="./assets/artst.html/id="><h5 class="card-title">${element.album.title}</h5></a>
-//                 <a href="#"><h5 class="card-title">${element.artist.name}</h5></a>
+window.onload = () => {
+  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=beatles")
+    .then(queen => queen.json())
+    .then(queenMusic => {
+      queenMusic.data.forEach(element => {
+        cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
+          <div class="card m-2" style="heigth:50px">
+            <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
+              <div class="card-body">
+              <a href="./artisti.html?id=${element.artist.id}"><h5 class="card-title">${element.artist.name}</h5></a>
+              <a href="./album.html?id=${element.album.id}"><h5 class="card-title">${element.album.title}</h5></a>
 
-//               </div>
-//           </div>
-//         </div>`
-//       })
-//     })
-// }
+              </div>
+          </div>
+        </div>`
+      })
+    })
+}
 
 //Gestione Cards della Homepage-"Altro che può piacere"
 //mi aggancio all'icona "cerca", al form e al button "Cerca"
@@ -89,6 +89,7 @@ document.querySelector('#search input').style.display = 'none'
 //mostra il campo input e il button "Cerca" e nasconde l'icona lente 
 function faiComparireInputFunction() {
   cerca.style.display = 'block'
+  
   document.querySelector('#search input').style.display = 'block'
   document.getElementById('sparire').style.display = 'none'
 }
@@ -110,13 +111,13 @@ cerca.addEventListener('click', (e) => {
     .then(musica => {
       console.log(musica)
       
-      
+      cardsHome.innerHTML = ""
       musica.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
           <div class="card m-2" style="heigth:50px">
             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
               <div class="card-body">
-                <a href="./artisti.html?artistiId=${element.artist.id}"><h5 class="card-title">${element.artist.name}</h5></a>
+                <a href="./artisti.html?id=${element.artist.id}"><h5 class="card-title">${element.artist.name}</h5></a>
                 <a href="./album.html?id=${element.album.id}"><h5 class="card-title">${element.album.title}</h5></a>
 
               </div>

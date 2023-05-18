@@ -44,7 +44,7 @@
       </div>
 
       <!-- MAIN CENTRALE -->
-      <div class="col-md-7 text-light p-0 container-fluid">
+      <div class="col-md-7 text-light p-0 container-fluid" style="overflow: scroll;">
         <!-- Sezione Centrale -->
         <div class="container-artista">
           <div class="utente">
@@ -65,8 +65,8 @@
 
           <div class="artista ps-4">
             <i class="bi bi-patch-check-fill text-primary"></i> Account verificato
-            <h1><b>NOME ARTISTA</b></h1>
-            <p>372827594 ascoltatori mensili</p>
+            <h1 id="titleArtist"><b></b></h1>
+            <p><span id="views"></span> ascoltatori mensili</p>
           </div>
         </div>
 
@@ -85,26 +85,36 @@
           <div><i class="bi bi-three-dots"></i></div>
         </div>
 
-        <div class="row">
-          <div class="col-12">
-            <h4 class="ps-3">Popolari</h4>
-          </div>
-        </div>
 
-        <div class="row mb-3 container-canzoni">
-          <div class="col-sm-6 col-3 ps-3">
-            <div class="d-flex justify-content-start align-items-center p-3">
-              1
-              <img src="assets/imgs/main/image-10.jpg" style="width: 30px; margin-left: 10px;">
+        <section class="d-flex"  style="background: linear-gradient(#212121,#121212);">
+          <section class="container col-8">
+
+            <h6 class="mb-2">Popolari</h6>
+
+
+            <div id="popolari" class="row align-items-center p-3">
+
+
             </div>
-          </div>
-          <div class="col-sm-3 col-3 justify-content-end align-self-center">
-            4239492359854
-          </div>
-          <div class="col-sm-3 col-3 justify-content-end align-self-center">
-            238758974398
-          </div>
-        </div>
+
+            <div class="col-4"></div>
+          </section>
+          <section id="BraniCheTiPiacciono" class="col-4 container">
+
+            <h6 class="mb-2">Brani che ti piacciono</h6>
+            <div class="d-flex justify-content-start p-3">
+              <div id="img_artist_like" style="background-color: aliceblue; width: 50px; height: 50px;" class="rounded-circle me-3">
+                
+              </div>
+              <div>
+                <p class="mt-1 mb-1" style="font-size: 10px;"><b>Hai messo mi piace a <span id="random_number"></span></b></p>
+                <p id="artist_likes" style="font-size: 10px;">Di &nbsp; </p>
+              </div>
+
+            </div>
+          </section>
+        </section>
+
 
       </div>
       <!--SIDEBAR ATTIVITA` AMICI-->
@@ -194,10 +204,13 @@
         <div class=" container-player sdd-flex flex-column align-items-center">
           <div class="d-flex justify-content-center fs-6">
             <i class="colorIconPlayer bi bi-shuffle pe-5"></i>
-            <div>
-              <i class="bi bi-skip-start-fill pe-1"></i>
-              <i class="icon-play bi bi-caret-right-fill"></i>
-              <i class="bi bi-skip-end-fill ps-1"></i>
+            <div class="d-flex justify-content-center">
+              <i class="bi bi-skip-start-fill pe-1 mt-1"></i>
+              
+              
+              <i class="icon-play bi bi-caret-right-fill"></i> 
+              <div id="audio" class="d-none"></div>
+              <i class="bi bi-skip-end-fill ps-1 mt-1"></i>
             </div>
             <i class="colorIconPlayer bi bi-arrow-repeat ps-5"></i>
           </div>
@@ -230,6 +243,7 @@
     </div>
   </div>
 
+<audio src=""></audio>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
