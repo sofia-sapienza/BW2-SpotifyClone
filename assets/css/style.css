@@ -500,6 +500,25 @@ body {
     .player-desktop{
         display: none;
     }
+    .altroCheTiPiace{
+        display: none;
+    }
+    .bi-suit-heart-fill{
+    font-size: 25px;
+    color: #1ED761;
+    }
+    .bi-three-dots-vertical{
+        font-size: 25px;
+    }
+    .image-annunci p{
+        font-size: 15px;
+        padding-top: 5px;
+      
+    }
+    .bi-play-circle-fill{
+        font-size: 25px;
+    }
+
 }
 
 
