@@ -446,6 +446,7 @@ body {
 }
 
 
+
 /* MEDIA MOBILE */
 
 @media screen and (max-width: 481px) {
@@ -581,15 +582,12 @@ body {
     .sezione-saluto i {
         display: none;
     }
-
     .sidebar-mobile {
         display: none;
     }
-
     .card-song-mobile {
         display: none;
     }
-
     .card-mobile {
         display: none;
     }
@@ -612,3 +610,34 @@ body {
         display: none;
     }
 }
+
+
+
+/*ALBUM MOBILE*/
+
+@media screen and (max-width: 1200px){
+    .sidebar-amici{
+        display: none;
+    }
+    .main-album{
+        width: 75%;
+    }
+    .dropdown-toggle {
+        background-color: black;
+        border: none;
+        position: fixed;
+        top: 2%;
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .sidebar{
+        display: none;
+    }
+    .main-album{
+        width: 100%;
+    }
+}
+
+
