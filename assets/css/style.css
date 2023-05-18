@@ -32,13 +32,7 @@ body {
 }
 
 /*INPUT*/
-form{
-    position: fixed;
-    top: 0;
-    left: 45%;
-    margin-top: 0.5em;
-    
-}
+
 
 form input{
     border-radius: 25%;
