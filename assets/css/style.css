@@ -470,21 +470,17 @@ body {
 
     .sezione-saluto {
         display: flex;
+        justify-content: space-between;
         margin-top: 20px;
     }
 
     .sezione-saluto h5 {
-        font-size: 25px;
+        font-size: 23px;
     
     }
 
     .sezione-saluto i {
-        font-size: 25px;
-        padding-left: 15px;
-    }
-
-    .sezione-saluto .bi-bell {
-        margin-left: 200px;
+        font-size: 23px;
     }
 
     .card {
