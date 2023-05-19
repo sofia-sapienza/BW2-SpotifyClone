@@ -641,6 +641,141 @@ body {
 }
 
 
+/* MEDIA MOBILE SOTTO I 480 */
+
+@media screen and (max-width: 320px) {
+   #salmo{
+    display: none;
+   }
+
+   
+
+
+    .dropdown {
+        display: none;
+    }
+
+    .chevron-icon {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar-amici {
+        display: none;
+    }
+
+    .card-song {
+        display: none;
+    }
+
+    .sezione-saluto {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .sezione-saluto h5 {
+        font-size: 23px;
+    
+    }
+
+    .sezione-saluto i {
+        font-size: 23px;
+    }
+
+    .card {
+        display: none;
+    
+    }
+
+    
+    .card-mobile {
+       display: flex;
+       background-color: rgba(255, 250, 250, 0.1);
+       border: none;
+       color: white;
+      width: 100%;
+     
+      
+    }
+
+    .container-sidebar-mobile {
+        display: flex;
+        justify-content: space-around;
+
+
+    }
+
+    .container-sidebar-mobile i {
+        font-size: 30px;
+
+    }
+
+
+    .container-annunci {
+        border-radius: 20px;
+    }
+
+    .button-play {
+        display: flex;
+    }
+
+    .player-container {
+        display: none;
+    }
+
+    .player-desktop{
+        display: none;
+    }
+
+    .containerPlayer-mobile{
+        display: none;
+        
+    }
+    .altroCheTiPiace{
+        display: none;
+    }
+    .bi-suit-heart-fill{
+        font-size: 25px;
+        color: #1ed760;
+    }
+    .bi-three-dots-vertical{
+        font-size: 25px;
+        color: #606060;
+    }
+    .brani{
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    .bi-play-circle-fill{
+        font-size: 25px;
+    }
+    .icone-playlist{
+        padding-top: 20px;
+    }
+    .brani-icona{
+     margin-left:30px;
+   
+    }
+    .brani-icona p{
+        color: #606060;
+    }
+    .brani-icona i{
+        margin-left:20px
+       }
+       
+       .text p{
+        font-size: 10px;
+       }
+
+       .card-text{
+        font-size: 10px;
+        
+       }
+}
 
 
 /* MEDIA DESKTOP */
