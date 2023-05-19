@@ -77,12 +77,12 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/artist/" + id)
         popolari.data.forEach((element, i) => {
           document.getElementById('popolari').innerHTML += `<div class="col-8 d-flex">
                 <div class="me-2 mt-2">${i + 1}</div>
-                <div class="mb-5 me-2" style="background-image: url('${element.album.cover}'); width:50px; height: 40px; background-size: cover;" ></div>
-                 <a  style="text-decoration: none; color: white; cursor:pointer" onclick="avviaBrano('${element.title}','${element.artist.name}','${element.album.cover}','${element.preview}')"><div class="w-100 ms-2 mb-5 mt-2" style="font-size:10px">${element.title_short}</div></a>
+                <div class="mb-2 me-2" style="background-image: url('${element.album.cover}'); width:50px; height: 40px; background-size: cover;" ></div>
+                 <a  style="text-decoration: none; color: white; cursor:pointer" onclick="avviaBrano('${element.title}','${element.artist.name}','${element.album.cover}','${element.preview}')"><div class="w-100 ms-2 mb-2 mt-2" style="font-size:10px">${element.title_short}</div></a>
              </div>
              
-             <div class="col-2 text-end mb-5 mt-2" style="font-size:10px; opacity:0.6">${element.rank}</div>
-             <div class="col-2 text-end mb-5 mt-2" style="font-size:10px; opacity:0.6">${(element.duration / 60).toFixed(0)}:${((element.duration) % 60) < 10 ? "0" + ((element.duration) % 60) : ((element.duration) % 60)}</div>
+             <div class="col-2 text-end mb-2 mt-2" style="font-size:10px; opacity:0.6">${element.rank}</div>
+             <div class="col-2 text-end mb-2 mt-2" style="font-size:10px; opacity:0.6">${(element.duration / 60).toFixed(0)}:${((element.duration) % 60) < 10 ? "0" + ((element.duration) % 60) : ((element.duration) % 60)}</div>
              
              `
         });
