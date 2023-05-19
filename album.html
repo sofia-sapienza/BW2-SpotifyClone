@@ -44,7 +44,7 @@
             </div>
 
             <!-- MAIN CENTRALE -->
-            <div class="col-sm-12 col-lg-7 text-light p-0 container main-album" style="position: relative; 
+            <div class="col-sm-12 col-lg-7 text-light p-0 container-fluid main-album" style="position: relative; 
             background: linear-gradient(180deg, rgba(231,195,60,1) 5%, rgba(18,18,18,1) 60%); overflow: auto;">
                 <!-- Sezione Centrale -->
                 <div class="pt-3 ps-3" >
@@ -56,39 +56,40 @@
                     <div id="card-cover" class="card p-0 m-0"></div>
                 </section>
 
-                <section id="tracks_container" class="container-fluid p-4" style="width: 100%; background-color: rgb(18, 18, 18, 0.2); position: absolute; top: 40%;">
-                    <div id="tracks" style="height: 100%; width: 100%;">
+                <section id="tracks_container" class="container-fluid p-4">
+                    <div id="tracks" style="width: 100%;">
+                        
                         <div id="tracks_play" style="width: 100%; height: 50px;" class="d-flex align-items-center mb-4">
-                            <div>
+                        <div>
     
-                                <button type="button" class="btn-circle me-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-play-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
-                                    </svg>
-                                </button>
-                            </div>
+                            <button type="button" class="btn-circle me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-play-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                </svg>
+                            </button>
+                        </div>
                             <!-- <i class="bi bi-play-fill me-3 fs-1"style="border-radius: 100%; background-color: #1ED760; color: black;"></i> -->
+                        <div>
                             <i class="bi bi-heart me-3 fs-5 "></i><i class="bi bi-box-arrow-down me-3 fs-5"></i>
                             <i class="bi bi-three-dots fs-5"></i>
                         </div>
-                        <div id="caratteristiche_tracks"
-                            style="width: 100%; font-size: 0.8em; border-bottom: 1px solid white; opacity: 0.5;"
-                            class="d-flex justify-content-between mb-3">
-                            <div class="d-flex col-4">
-                                <div class="me-3">#</div>
-                                <div>TITOLO</div>
-                            </div>
-
-                            <div class="col-4 text-center">RIPRODUZIONE</div>
-                            <div class="col-4 text-end"><i class="bi bi-clock"></i></div>
+                    </div>
+                    <div id="caratteristiche_tracks" style="width: 100%; font-size: 0.8em; border-bottom: 1px solid white; opacity: 0.5;"
+                        class="d-flex justify-content-between mb-3">
+                        <div class="d-flex col-4">
+                            <div class="me-3">#</div>
+                            <div>TITOLO</div>
                         </div>
-                        <div id="caratteristiche_singola_track"></div>
-                        <div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;"
-                            class="d-flex justify-content-between align-items-center mb-3">
-                        <div id="caratteristiche_singola_track">
-                        </div>
+                        <div class="col-4 text-center">RIPRODUZIONE</div>
+                        <div class="col-4 text-end"><i class="bi bi-clock"></i></div>
+                    </div>
+                    <div id="caratteristiche_singola_track" class="container-fluid" style="height: 100%;"></div>
+                    <div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;"
+                        class="d-flex justify-content-between align-items-center mb-3">
+                    <div id="caratteristiche_singola_track">
+                    </div>
 
                     </div>
 

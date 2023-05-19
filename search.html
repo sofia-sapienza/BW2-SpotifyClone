@@ -13,57 +13,45 @@
 
 <body>
     <div class="container-fluid cerca">
-        <h1 class="text-light">Cerca</h1>
-        <div class="search-container">
-            <input type="text" class="search-input" value="Cosa vuoi cercare?" onclick="this.value='';">
-        </div>
+        <h1 class="text-light ms-3 mt-3">Cerca</h1>
+        <form class="d-flex" role="search">
+            <input class="form-control me-3 ms-3" type="search" placeholder="Cerca" aria-label="Search">
+            <button class="btn btn-cerca-mobile me-3" type="submit">Cerca</button>
+        </form>
+
   
-        <div class="row justify-content-between g-3">
+        <div class="row justify-content-around g-3 mt-3">
             <div class="col-5 image-container podcast">
-                <div class="image-text">Podcast</div>
+                <div class="image-text pt-2">Podcast</div>
                 <img src="./assets/imgs/search/image-2.jpg" alt="Imagen">
             </div>
-            <div class="col-5 image-container bg-primary forYou">
-                <a href="#">
-                    <div class="image-text">Create per te</div>
+            <div class="col-5 image-container forYou">
+                    <div class="image-text pt-2">Create per te</div>
                     <img src="./assets/imgs/search/image-47.jpg" alt="Imagen">
-                </a>
             </div>
             <div class="col-5 image-container new">
-                <a href="#">
-                    <div class="image-text">Nuove uscite</div>
+                    <div class="image-text pt-2">Nuove uscite</div>
                     <img src="assets/imgs/search/image-42.png" alt="Imagen">
-                </a>
             </div>
             <div class="col-5 image-container pop">
-                <a href="#">
-                    <div class="image-text">Pop</div>
+                    <div class="image-text pt-2">Pop</div>
                     <img src="assets/imgs/search/image-49.jpg" alt="Imagen">
-                </a>
             </div>
             <div class="col-5 image-container hipHop">
-                <a href="#">
-                    <div class="image-text">Hip-hop</div>
+                    <div class="image-text pt-2">Hip-hop</div>
                     <img src="assets/imgs/search/image-46.jpeg" alt="Imagen">
-                </a>
             </div>
             <div class="col-5 image-container dance">
-                <a href="#">
-                    <div class="image-text">Dance/<br>Elettronica</div>
+                    <div class="image-text pt-2">Dance/<br>Elettronica</div>
                     <img src="assets/imgs/search/image-33.jpg" alt="Imagen">
-                </a>
             </div>
             <div class="col-5 image-container latina">
-                <a href="#">
-                    <div class="image-text">Latina</div>
+                    <div class="image-text pt-2">Latina</div>
                     <img src="assets/imgs/search/image-39.jpg" alt="Imagen">
-                </a>
             </div>
             <div class="col-5 image-container classifiche">
-                <a href="#">
-                    <div class="image-text">Classifiche</div>
+                    <div class="image-text pt-2">Classifiche</div>
                     <img src="assets/imgs/search/image-10.jpg" alt="Imagen">
-                </a>
             </div>
         </div>
     </div>

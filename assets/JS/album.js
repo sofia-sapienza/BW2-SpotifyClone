@@ -57,14 +57,14 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
     .then(response => response.json())
     .then(artist => {
         console.log(artist)
-        cover.innerHTML = `<div class="row pt-5 ms-3 container">
-                <div id="cover_Album" class="col-md-4 me-3" style="background-image: url('${artist.cover}');">
-
+        cover.innerHTML = `<div class="row pt-5 ms-3 container-fluid">
+                <div class='container-fluid col-md-4 col-12 container-img-album' >
+                    <div id="cover_Album" style="background-image: url('${artist.cover}');"></div>
                 </div>
-                <div class="col-md-8 d-flex flex-column w-75">
+                <div class="col-md-8 col-12 d-flex container-fluid">
                     <div class="card-body d-flex flex-column justify-content-end">
                         <p id="p_Album" class="m-0">ALBUM</p>
-                        <h5 id="title_Album" class="card-title">${artist.title}</h5>
+                        <h5 id="title_Album" class="card-title col-12">${artist.title}</h5>
                         <div id="dettagli_Album" class="d-flex">
                             <div style="background-image: url('${artist.artist.picture_small}'); width: 20px;height: 20px; background-size: contain;" class="rounded-circle me-2"></div>
                             <p class="card-text me-2 mt-1"><b>${artist.artist.name}</b></p>
@@ -87,7 +87,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
 
         tracks.tracks.data.forEach((element, i) => {
             console.log(element.preview)
-            document.getElementById('caratteristiche_singola_track').innerHTML += `<div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
+            document.getElementById('caratteristiche_singola_track').innerHTML += `<div class='container-fluid' style='height:100%'> <div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;" class="d-flex justify-content-between align-items-center mb-3">
                 <div class="d-flex col-4">
                     <div class="me-3 ">${i + 1}</div>
                     <div>
@@ -99,6 +99,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
 
                 <div class="col-4 text-center" >${element.rank}</div>
                 <div class="col-4 text-end">${(element.duration / 60).toFixed(0)}:${((element.duration) % 60) < 10 ? "0" + ((element.duration) % 60) : ((element.duration) % 60)}</div>
+                </div>
                 </div>`
 
         });
