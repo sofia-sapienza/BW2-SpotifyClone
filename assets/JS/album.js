@@ -61,7 +61,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
                 <div id="cover_Album" class="col-md-4 me-3" style="background-image: url('${artist.cover}');">
 
                 </div>
-                <div class="col-md-8 d-flex flex-column ">
+                <div class="col-md-8 d-flex flex-column w-75">
                     <div class="card-body d-flex flex-column justify-content-end">
                         <p id="p_Album" class="m-0">ALBUM</p>
                         <h5 id="title_Album" class="card-title">${artist.title}</h5>
@@ -106,37 +106,45 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/album/" + id)
     })
 
 
-console.log(id)
+
 
 function avviaBrano(title, name_artist, img, preview) {
 
     document.querySelector('.container-imgPlayer img').src = img
     document.querySelector('.titlePlayer b').innerText = name_artist
     document.querySelector('#artistPlayer_album').innerText = title
+    document.querySelector('#artistPlayer_album_coda').innerText = title
 
     console.log(preview)
 
     let play = false
-    let progress_bar_interval 
-    document.getElementById('button_play_album').addEventListener('click', (mp3) => {
+    let progress_bar_interval
+    document.getElementById('button_play_album').addEventListener('click', () => {
 
         play = !play
         console.log(play)
         if (play) {
 
             let n = 0
-            console.log('ciao')
+
             progress_bar_interval = setInterval(function () {
 
 
-                document.getElementById('progress_audio').style.width = `${n*(100/30)}%`
-                document.getElementById('start_traccia').innerText = "0:"+(n<10? "0"+ n:n)
+                document.getElementById('progress_audio').style.width = `${n * (100 / 30)}%`
+                document.getElementById('start_traccia').innerText = "0:" + (n < 10 ? "0" + n : n)
                 n++
-                if(n>30){
+                if (n > 30) {
                     clearInterval(progress_bar_interval)
-                    
+                    document.getElementById('artistPlayer_album_coda').style.opacity = '0'
+                    document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
+                    document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+          `
+                    document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
+                    document.getElementById('text-animation_album').classList.remove('text-animation')
+                    document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
+
                 }
-console.log(this)
+
             }, 1000)
 
 
@@ -144,20 +152,19 @@ console.log(this)
             document.getElementById('container-scroll-text').classList.add('container-scroll-text')
             document.getElementById('text-animation_album').classList.add('text-animation')
             document.getElementById('artistPlayer_album').classList.add('artistPlayer')
-
-
-
-
+            document.querySelector('#artistPlayer_album_coda').style.opacity = '1'
+            document.querySelector('#artistPlayer_album_coda').classList.add('artistPlayer')
             document.getElementById('container_play').innerHTML = `<path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>`
             document.getElementById('audio').innerHTML = `<audio controls autoplay>
-       
-       
-        <source src='${preview}' type="audio/mpeg">
-       
-      </audio>`
+                                                            <source src='${preview}' type="audio/mpeg">
+                                                        </audio>`
         } else {
             document.getElementById('audio').innerHTML = ''
-            
+            document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
+            document.getElementById('text-animation_album').classList.remove('text-animation')
+            document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
+            document.querySelector('#artistPlayer_album_coda').style.opacity = '0'
+            document.querySelector('#artistPlayer_album_coda').classList.remove('artistPlayer')
             console.log(progress_bar_interval)
             clearInterval(progress_bar_interval)
             console.log(document.getElementById('container_play'))

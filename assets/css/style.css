@@ -81,6 +81,7 @@ body {
 .dropdown-toggle:hover{
     background-color: rgba(111, 142, 119, 0.3);
 }
+
 .sezione-centrale h2 {
     font-size: 15px;
     font-weight: bold;
@@ -91,7 +92,7 @@ body {
     margin-top: 20%;
 }
 
-#homeAltroCheTiPiace {
+#homeAltroCheTiPiace{
     overflow: auto;
 }
 
@@ -210,7 +211,10 @@ body {
     flex: 1 33.333%;
 }
 
-
+/*____ARTIST PAGE COVER___*/
+#titleArtist{
+    font-size: 77px;
+}
 /* ____PLAYER____*/
 
 /* canzone in riproduzione */
@@ -324,8 +328,9 @@ body {
     0%{
         transform: translate3d(0,0,0);
     }
+    
     100%{
-        transform: translate3d(-50%,0,0);
+        transform: translate3d(-100%,0,0);
     }
 }
 /* barra volume */
@@ -358,7 +363,7 @@ body {
 }
 
 #title_Album {
-    font-size: 3em;
+    font-size: 77px;
     font-weight: 900;
     margin-bottom: 0.5em;
 }
@@ -628,6 +633,7 @@ body {
         position: fixed;
         top: 2%;
         right: 2%;
+        z-index: 10;
     }
 }
 

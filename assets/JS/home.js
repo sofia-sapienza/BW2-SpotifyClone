@@ -1,3 +1,30 @@
+
+
+// ____SEZIONE BUONASERA____ //
+
+
+
+  var oraCorrente = new Date().getHours();
+  console.log(oraCorrente)
+  var saluto;
+  
+  if (oraCorrente >= 6 && oraCorrente < 12) {
+    saluto = "Buongiorno";
+  } else if (oraCorrente >= 12 && oraCorrente < 18) {
+    saluto = "Buon pomeriggio";
+  } else if (oraCorrente >= 18 && oraCorrente < 24) {
+    saluto = "Buonasera";
+  }else if(oraCorrente>=0 && oraCorrente<6){
+    saluto = "Buonanotte";
+  }
+  
+  document.getElementById("saluto").innerHTML = saluto;
+  
+  
+  
+  
+ 
+
 //Questo sarà l'array che cicleremo per populare la spazio dedicato alle playlist
 
 const playlistNames = [
@@ -71,10 +98,18 @@ btnAnnunci.addEventListener('click', function () {
       console.log(randomMusic.data[random_number_track_home].title)
       console.log(randomMusic.data[random_number_track_home].artist.name)
       console.log(randomMusic.data[random_number_track_home].album.cover_small)
-      document.querySelector('.container-imgPlayer img').src = randomMusic.data[random_number_track_home].album.cover_small
-    document.querySelector('.titlePlayer b').innerText = randomMusic.data[random_number_track_home].artist.name
-    document.querySelector('#artistPlayer_album').innerText = randomMusic.data[random_number_track_home].title
+      console.log(randomMusic.data[random_number_track_home].preview)
+
       
+      document.querySelector('.container-imgPlayer img').src = randomMusic.data[random_number_track_home].album.cover_small
+      document.querySelector('.titlePlayer b').innerText = randomMusic.data[random_number_track_home].artist.name
+      document.querySelector('#artistPlayer_album').innerText = randomMusic.data[random_number_track_home].title.replaceAll("'", "‛")
+      document.querySelector('#artistPlayer_album_coda').innerText = randomMusic.data[random_number_track_home].title.replaceAll("'", "‛")
+      document.getElementById('div_play_album').innerHTML = `<button type="button" class="btn-circle" id="button_play_album" onclick="avviaBrano('${randomMusic.data[random_number_track_home].preview}')" >
+      <svg xmlns="http://www.w3.org/2000/svg" id="container_play" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+          <path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+      </svg></button>`
+
       randomMusic.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
           <div class="card m-2" style="heigth:50px">
@@ -155,22 +190,69 @@ cerca.addEventListener('click', (e) => {
 console.log(cerca)
 console.log(search)
 
-// ____SEZIONE BUONASERA____ //
-function generaSaluto() {
-var oraCorrente = new Date().getHours();
-var saluto;
 
-if (oraCorrente >= 6 && oraCorrente < 12) {
-  saluto = "Buongiorno";
-} else if (oraCorrente >= 12 && oraCorrente < 18) {
-  saluto = "Buon pomeriggio";
-} else if (oraCorrente >= 18 && oraCorrente < 24) {
-  saluto = "Buonasera";
+
+
+let play = false
+
+let progress_bar_interval
+
+function avviaBrano(preview) {
+  
+  
+  
+  play = !play
+      
+      if (play) {
+
+          let n = 0
+          
+          progress_bar_interval = setInterval(function () {
+
+              document.getElementById('artistPlayer_album_coda').style.opacity= '1'
+              document.getElementById('artistPlayer_album_coda').classList.add('artistPlayer')
+              document.getElementById('progress_audio').style.width = `${n * (100 / 30)}%`
+              document.getElementById('start_traccia').innerText = "0:" + (n < 10 ? "0" + n : n)
+              n++
+              if (n > 30) {
+                  clearInterval(progress_bar_interval)
+                  document.getElementById('artistPlayer_album_coda').style.opacity= '0'
+                  document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
+                  document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+          `
+                  document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
+                  document.getElementById('text-animation_album').classList.remove('text-animation')
+                  document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
+              }
+
+          }, 1000)
+
+
+          document.getElementById('artistPlayer_album_coda').style.opacity= '1'
+          document.getElementById('artistPlayer_album_coda').classList.add('artistPlayer')
+          document.getElementById('container-scroll-text').classList.add('container-scroll-text')
+          document.getElementById('text-animation_album').classList.add('text-animation')
+          document.getElementById('artistPlayer_album').classList.add('artistPlayer')
+          document.getElementById('container_play').innerHTML = `<path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>`
+          document.getElementById('audio').innerHTML = `<audio controls autoplay>
+                                                          <source src='${preview}' type="audio/mpeg">
+                                                      </audio>`
+      } else {
+          document.getElementById('audio').innerHTML = ''
+          document.getElementById('artistPlayer_album_coda').style.opacity= '0'
+          document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
+          document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
+          document.getElementById('text-animation_album').classList.remove('text-animation')
+          document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
+          console.log(progress_bar_interval)
+          clearInterval(progress_bar_interval)
+          console.log(document.getElementById('container_play'))
+          document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+          `
+      }
+
+
+
+  
+
 }
-
-document.getElementById("saluto").innerHTML = saluto;
-}
-
-
-generaSaluto();
-
