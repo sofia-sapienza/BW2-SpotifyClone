@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- sidebar -->
-            <div class="col-xl-3 text-light pt-2 sidebar">
+            <div class="col-md-3 text-light pt-2 sidebar">
                 <div class="mb-5">
                     <p><i class="bi bi-three-dots"></i></p>
                     <a href="./home.html" style="text-decoration: none; color: white;">
@@ -44,26 +44,23 @@
             </div>
 
             <!-- MAIN CENTRALE -->
-            <div class="col-xl-7 text-light p-0 container" style="position: relative; 
+            <div class="col-sm-12 col-lg-7 text-light p-0 container main-album" style="position: relative; 
             background: linear-gradient(180deg, rgba(231,195,60,1) 5%, rgba(18,18,18,1) 60%); overflow: auto;">
                 <!-- Sezione Centrale -->
                 <div class="pt-3 ps-3" >
                     <i class="bi bi-chevron-left chevron-icon"></i>
                     <i class="bi bi-chevron-right ms-2 chevron-icon"></i>
-
                 </div>
-                <section id="cover" class="p-3">
-                    
-                    <div id="card-cover" class="card p-0 m-0">
 
-                    </div>
+                <section id="cover" class="p-3 container-fluid">
+                    <div id="card-cover" class="card p-0 m-0"></div>
                 </section>
-                <section id="tracks_container" class="container p-4"
-                    style=" width: 100%; background-color: rgb(18, 18, 18, 0.2);position: absolute; top: 40%;">
+
+                <section id="tracks_container" class="container-fluid p-4" style="width: 100%; background-color: rgb(18, 18, 18, 0.2); position: absolute; top: 40%;">
                     <div id="tracks" style="height: 100%; width: 100%;">
                         <div id="tracks_play" style="width: 100%; height: 50px;" class="d-flex align-items-center mb-4">
                             <div>
-                                
+    
                                 <button type="button" class="btn-circle me-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-play-fill" viewBox="0 0 16 16">
@@ -90,11 +87,7 @@
                         <div id="caratteristiche_singola_track"></div>
                         <div id="track" style="width: 100%; font-size: 0.8em; opacity: 0.75;"
                             class="d-flex justify-content-between align-items-center mb-3">
-                           
-                              
                         <div id="caratteristiche_singola_track">
-                            
-
                         </div>
 
                     </div>
@@ -111,7 +104,7 @@
                 </div>
             </div>
             <!--SIDEBAR ATTIVITA` AMICI-->
-      <div class="col-xl-2 text-light sidebar-amici">
+      <div class="col-md-2 text-light sidebar-amici">
         <div class="mt-3 mb-5">
           <h6>Attività amici<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-person-add ms-5" viewBox="0 0 16 16">
@@ -187,9 +180,10 @@
                         <div class="song-descriptionPlayer ps-2">
                             <p class="titlePlayer"><b>Imagine Dragons</b></p>
                             <div id="container-scroll-text">
-                                <div class="text-animation">
-                                  <p class="artistPlayer">Mercury</p>
-                                </div>
+                                <div id="text-animation_album">
+                                    <p id="artistPlayer_album" style="display: inline-block;" class="me-3">Mercury</p>
+                                    <p id="artistPlayer_album_coda" style="display: inline-block; opacity: 0;">Ciao</p>
+                                  </div>
                               </div>
                         </div>
                         <div>
@@ -199,26 +193,31 @@
                 </div>
                 <!--container player-->
                 <div class=" container-player sdd-flex flex-column align-items-center">
-                    <div class="d-flex justify-content-center fs-6">
+                    <div class="d-flex justify-content-center align-items-center fs-6">
                         <i class="colorIconPlayer bi bi-shuffle pe-5"></i>
-                        <div>
+                        <div class="d-flex align-items-center">
                             <i class="bi bi-skip-start-fill pe-1"></i>
-                            <i class="icon-play bi bi-caret-right-fill"></i>
+                            <button type="button" class="btn-circle" id="button_play_album" >
+                                <svg xmlns="http://www.w3.org/2000/svg" id="container_play" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                    <path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                                </svg>
+                            </button>
+                            <!-- <i class="icon-play bi bi-caret-right-fill"></i> VECCHIO PLAY -->
                             <div id="audio" class="d-none"></div>
                             <i class="bi bi-skip-end-fill ps-1"></i>
                         </div>
                         <i class="colorIconPlayer bi bi-arrow-repeat ps-5"></i>
                     </div>
                     <div class="progress-container pt-2">
-                        <span>0:49</span>
+                        <span id="start_traccia">0:00</span>
                         <div class="progress-bar">
-                            <div class="progress"></div>
+                            <div class="progress" id="progress_audio"></div>
                         </div>
-                        <span>3:15</span>
+                        <span id="end_traccia">0:30</span>
                     </div>
                 </div>
                 <!--container icone varie-->
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center container_icone_player justify-content-end">
                     <i class="bi bi-mic pe-1"></i>
                     <i class="bi bi-list pe-1"></i>
                     <i class="bi bi-pc-display pe-1"></i>
