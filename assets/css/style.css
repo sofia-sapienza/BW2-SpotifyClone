@@ -10,6 +10,10 @@ body {
     background-color: #202020;
 }
 
+h1{
+    font-size: 50px;
+    
+}
 /* ____SIDEBAR SINISTRA____ */
 .cuore {
     background: rgb(19, 0, 36);
@@ -219,6 +223,10 @@ body {
 
 /* canzone in riproduzione */
 
+
+#imgDragon{
+    font-size: 15px;
+}
 .container-song {
     display: flex;
     align-items: center;
@@ -353,7 +361,7 @@ body {
 /*------------------------ALBUM PAGE-----------------------*/
 
 #cover {
-    height: 430px;
+   
     
     margin: 0 auto;
 }
@@ -363,7 +371,7 @@ body {
 }
 
 #title_Album {
-    font-size: 77px;
+    font-size: 50px;
     font-weight: 900;
     margin-bottom: 0.5em;
 }
