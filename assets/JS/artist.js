@@ -33,6 +33,7 @@ const playlistNames = [
   "No song without you",
 ];
 console.log(playlistNames);
+avviaBrano(localStorage.getItem("nameArtist_Player"), localStorage.getItem("nameArtist_Player"), localStorage.getItem("imgAlbum_Player"),localStorage.getItem("preview_Player"))
 
 //ho creato un riferimento alla lista <ul> con id list-playlist
 const listaDaPopulare = document.getElementById("list-playlist");
@@ -43,10 +44,8 @@ for (let i = 0; i < playlistNames.length; i++) {
   listaDaPopulare.appendChild(elementoLi);
 }
 
-//rendo invisibile il form per la ricerca e il button
-const cerca = document.querySelector('#search button');
-cerca.style.display = 'none'
-document.querySelector('#search input').style.display = 'none'
+
+
 const cover = document.getElementById('cover');
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -94,7 +93,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/artist/" + id)
 
   })
 
-
+  .catch(err => console.log(err))
 function avviaBrano(title, name_artist, img, preview) {
 
   console.log(preview)
@@ -104,7 +103,7 @@ function avviaBrano(title, name_artist, img, preview) {
   document.querySelector('.titlePlayer b').innerText = name_artist
   document.querySelector('#artistPlayer_album').innerText = title
   document.querySelector('#artistPlayer_album_coda').innerText = title
-
+  document.querySelector('.bi-heart-fill').classList.remove('color_heart')
   let play = false
   let progress_bar_interval
   document.getElementById('button_play_album').addEventListener('click', () => {
@@ -123,14 +122,14 @@ function avviaBrano(title, name_artist, img, preview) {
         n++
         if (n > 30) {
           clearInterval(progress_bar_interval)
-          document.getElementById('artistPlayer_album_coda').style.opacity = '0'
+          document.getElementById('artistPlayer_album_coda').style.display = 'none'
           document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
           document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
           `
           document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
           document.getElementById('text-animation_album').classList.remove('text-animation')
           document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
-
+          document.getElementById('progress_audio').style.width = `0%`
         }
 
       }, 1000)
@@ -140,7 +139,7 @@ function avviaBrano(title, name_artist, img, preview) {
       document.getElementById('container-scroll-text').classList.add('container-scroll-text')
       document.getElementById('text-animation_album').classList.add('text-animation')
       document.getElementById('artistPlayer_album').classList.add('artistPlayer')
-      document.querySelector('#artistPlayer_album_coda').style.opacity = '1'
+      document.querySelector('#artistPlayer_album_coda').style.display = 'block'
       document.querySelector('#artistPlayer_album_coda').classList.add('artistPlayer')
       document.getElementById('container_play').innerHTML = `<path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>`
       document.getElementById('audio').innerHTML = `<audio controls autoplay>
@@ -152,8 +151,9 @@ function avviaBrano(title, name_artist, img, preview) {
       document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
       document.getElementById('text-animation_album').classList.remove('text-animation')
       document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
-      document.querySelector('#artistPlayer_album_coda').style.opacity = '0'
+      document.querySelector('#artistPlayer_album_coda').style.display = 'none'
       document.querySelector('#artistPlayer_album_coda').classList.remove('artistPlayer')
+      //document.getElementById('little-heart').classList.remove('color_heart')
       console.log(progress_bar_interval)
       clearInterval(progress_bar_interval)
       console.log(document.getElementById('container_play'))
@@ -170,5 +170,18 @@ function avviaBrano(title, name_artist, img, preview) {
 
 }
 
+let i_like_it = false
+function like(){
+  i_like_it = !i_like_it
+  if(i_like_it){
+    document.querySelector('.bi-heart-fill').classList.add('color_heart')
+  }
+  else{
+    document.querySelector('.bi-heart-fill').classList.remove('color_heart')
+  }
+  console.log(i_like_it)
+  
+  
+}
 
 

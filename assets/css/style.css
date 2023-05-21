@@ -65,7 +65,79 @@ h1{
     width: 3em;
 }
 
+
+/*Download*/
+
+.bi-caret-down-fill{
+    opacity: 0;
+}
+.download_arrow{
+   opacity: 1;
+   font-size: 25px;
+   color: #1ED760;
+   text-shadow: 3px 3px 20px #1ED760;
+   animation: download_move 1000ms linear  infinite;
+
+}
+
+
+
+@keyframes download_move{
+    0%{
+        transform: translateY(0,0,0);
+        
+        
+    }
+    
+    100%{
+        transform: translateY(500px);
+       
+        opacity: 0;
+    }
+}
+
+
 /* ____MAIN CENTRALE____ */
+
+
+
+#toggle-btn {
+    display: inline-block;
+    width:40px;
+    height: 20px;
+    background-color: black;
+    
+    background-size: 100%;
+    border-radius: 24px;
+    position: relative;
+    transition: all ease-in-out .4s; /* animati tutti gli elementi (all), accelerazione ease-in-out, durata 0.4 secondi */
+    cursor: pointer;
+}
+#toggle-btn::before {
+    position: absolute;
+    width:10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    left:6px;
+    top:5px;
+    content: '';
+    transition: all ease-in-out .4s;
+    z-index: 10;
+}
+#toggle-btn.toggle-btn--dark {
+    background-color: #1ED760;
+}
+
+#toggle-btn.toggle-btn--dark::before {
+    left: 24px;
+}
+.light-mode {
+    background: linear-gradient(180deg, rgba(25, 85, 46, 0.8) 10%, rgba(18,18,18,0.4) 50%);
+    
+  }
+
+
 
 .chevron-icon {
     background-color: #000000;
@@ -248,16 +320,16 @@ h1{
     object-fit: cover;
 }
 
-.song-descriptionPlayer p {
-    margin: 0.2em;
-}
+
 
 /* comandi player */
 .player {
     background-color: #202020;
     border-top: 1px solid #6c6b6b;
 }
-
+.color_heart{
+    color: red;
+}
 .container-player, .container-songPrincipale {
     width: 33.333%;
 }
@@ -322,7 +394,7 @@ h1{
 .text-animation{
     overflow: hidden;
     white-space: nowrap;
-    display: inline-block;
+    
     
 }
 
@@ -366,6 +438,9 @@ h1{
     margin: 0 auto;
 }
 
+.download_class{
+    color:rgb(30, 215, 96);
+}
 #p_Album {
     font-size: 8px;
 }
@@ -385,7 +460,7 @@ h1{
     background-color: white;
     width: 150px;
     height: 150px;
-    box-shadow: 1px 0px 33px #5A4E20;
+    
     background-size: contain;
 }
 

@@ -4,26 +4,26 @@
 
 
 
-  var oraCorrente = new Date().getHours();
-  console.log(oraCorrente)
-  var saluto;
-  
-  if (oraCorrente >= 6 && oraCorrente < 12) {
-    saluto = "Buongiorno";
-  } else if (oraCorrente >= 12 && oraCorrente < 18) {
-    saluto = "Buon pomeriggio";
-  } else if (oraCorrente >= 18 && oraCorrente < 24) {
-    saluto = "Buonasera";
-  }else if(oraCorrente>=0 && oraCorrente<6){
-    saluto = "Buonanotte";
-  }
-  
-  document.getElementById("saluto").innerHTML = saluto;
-  
-  
-  
-  
- 
+var oraCorrente = new Date().getHours();
+console.log(oraCorrente)
+var saluto;
+
+if (oraCorrente >= 6 && oraCorrente < 12) {
+  saluto = "Buongiorno";
+} else if (oraCorrente >= 12 && oraCorrente < 18) {
+  saluto = "Buon pomeriggio";
+} else if (oraCorrente >= 18 && oraCorrente < 24) {
+  saluto = "Buonasera";
+} else if (oraCorrente >= 0 && oraCorrente < 6) {
+  saluto = "Buonanotte";
+}
+
+document.getElementById("saluto").innerHTML = saluto;
+
+
+
+
+
 
 //Questo sarà l'array che cicleremo per populare la spazio dedicato alle playlist
 
@@ -82,36 +82,35 @@ btnAnnunci.addEventListener('click', function () {
 
 //Al caricmaneto della pagina vengono generate le card
 
-  const array_artisti = ['Queen', 'Maneskin', 'Thasup','Beyoncè', 'Miley Cyrus', 'Beatles', 'Harry Styles', 'Bad Bunny', 'Rihanna', 'coldplay', 'Lucio Dalla', 'Elodie', 'Cardi B', 'Taylor Swift', 'Coez', 'Carl Brave', 'Frah Quintale', 'Maroon 5', 'Annalisa', 'Sfera Ebbasta', 'Pinguini tattici nucleari', 'Pavarotti', 'Cesare Cremonini', 'Jovanotti', 'Elisa', 'Travis Scott', 'Justin Bieber', 'Drake', 'Florence + The Machine', 'Blanco', 'Lady Gaga', 'JAY-Z', 'Raffaella Carrà', 'Britney Spears', 'Abba', 'Labrinth', 'Lazza', 'Franco Battiato', 'Avril Lavigne', 'Machine Gun Kelly', 'Nicki Minaj', 'Ed Sheeran', 'Salmo']
-  
-  
-  const random_number = Math.round(Math.random()*array_artisti.length)
-  console.log(random_number)
-  const random_artist = array_artisti[random_number]
-  fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q="+ random_artist)
-    .then(queen => queen.json())
-    .then(randomMusic => {
-      console.log(randomMusic)
-      const random_number_track_home = Math.round(Math.random()*randomMusic.data.length)
-      console.log(random_number_track_home)
-      console.log(randomMusic.data[random_number_track_home])
-      console.log(randomMusic.data[random_number_track_home].title)
-      console.log(randomMusic.data[random_number_track_home].artist.name)
-      console.log(randomMusic.data[random_number_track_home].album.cover_small)
-      console.log(randomMusic.data[random_number_track_home].preview)
+var array_artisti = ['Queen', 'Maneskin', 'Thasup', 'Beyoncè', 'Miley Cyrus', 'Beatles', 'Harry Styles', 'Bad Bunny', 'Rihanna', 'coldplay', 'Lucio Dalla', 'Elodie', 'Cardi B', 'Taylor Swift', 'Coez', 'Carl Brave', 'Frah Quintale', 'Maroon 5', 'Annalisa', 'Sfera Ebbasta', 'Pinguini tattici nucleari', 'Pavarotti', 'Cesare Cremonini', 'Jovanotti', 'Elisa', 'Travis Scott', 'Justin Bieber', 'Drake', 'Florence + The Machine', 'Blanco', 'Lady Gaga', 'JAY-Z', 'Raffaella Carrà', 'Britney Spears', 'Abba', 'Labrinth', 'Lazza', 'Franco Battiato', 'Avril Lavigne', 'Machine Gun Kelly', 'Nicki Minaj', 'Ed Sheeran', 'Salmo']
 
-      
-      document.querySelector('.container-imgPlayer img').src = randomMusic.data[random_number_track_home].album.cover_small
-      document.querySelector('.titlePlayer b').innerText = randomMusic.data[random_number_track_home].artist.name
-      document.querySelector('#artistPlayer_album').innerText = randomMusic.data[random_number_track_home].title.replaceAll("'", "‛")
-      document.querySelector('#artistPlayer_album_coda').innerText = randomMusic.data[random_number_track_home].title.replaceAll("'", "‛")
-      document.getElementById('div_play_album').innerHTML = `<button type="button" class="btn-circle" id="button_play_album" onclick="avviaBrano('${randomMusic.data[random_number_track_home].preview}')" >
+console.log(array_artisti.length)
+const random_number = Math.round(Math.random() * array_artisti.length)
+console.log(random_number)
+const random_artist = array_artisti[random_number]
+fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + random_artist)
+  .then(queen => queen.json())
+  .then(randomMusic => {
+    console.log(randomMusic)
+    const random_number_track_home = Math.round(Math.random() * randomMusic.data.length)
+    
+
+
+    document.querySelector('.container-imgPlayer img').src = randomMusic.data[random_number_track_home].album.cover_small
+    document.querySelector('.titlePlayer b').innerText = randomMusic.data[random_number_track_home].artist.name
+    document.querySelector('#artistPlayer_album').innerText = randomMusic.data[random_number_track_home].title.replaceAll("'", "‛")
+    localStorage.setItem("imgAlbum_Player", randomMusic.data[random_number_track_home].album.cover_small)  
+    localStorage.setItem("titleTrack_Player", randomMusic.data[random_number_track_home].title.replaceAll("'", "‛"))   
+    localStorage.setItem("nameArtist_Player", randomMusic.data[random_number_track_home].artist.name) 
+    localStorage.setItem("preview_Player", randomMusic.data[random_number_track_home].preview)
+    document.querySelector('#artistPlayer_album_coda').innerText = randomMusic.data[random_number_track_home].title.replaceAll("'", "‛")
+    document.getElementById('div_play_album').innerHTML = `<button type="button" class="btn-circle" id="button_play_album" onclick="avviaBrano('${randomMusic.data[random_number_track_home].preview}')" >
       <svg xmlns="http://www.w3.org/2000/svg" id="container_play" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
           <path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
       </svg></button>`
 
-      randomMusic.data.forEach(element => {
-        cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
+    randomMusic.data.forEach(element => {
+      cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
           <div class="card m-2" style="heigth:50px">
             <img class="card-img-top p-2 rounded" src=${element.album.cover} alt="Card image cap" width="30px">
               <div class="card-body">
@@ -121,12 +120,12 @@ btnAnnunci.addEventListener('click', function () {
               </div>
           </div>
         </div>`
-      })
     })
-    
-    
+  })
 
-   
+
+
+
 
 //Gestione Cards della Homepage-"Altro che può piacere"
 //mi aggancio all'icona "cerca", al form e al button "Cerca"
@@ -144,7 +143,7 @@ document.querySelector('#search input').style.display = 'none'
 //mostra il campo input e il button "Cerca" e nasconde l'icona lente 
 function faiComparireInputFunction() {
   cerca.style.display = 'block'
-  
+
   document.querySelector('#search input').style.display = 'block'
   document.getElementById('sparire').style.display = 'none'
 }
@@ -165,7 +164,7 @@ cerca.addEventListener('click', (e) => {
     .then(response => response.json())
     .then(musica => {
       console.log(musica)
-      
+
       cardsHome.innerHTML = ""
       musica.data.forEach(element => {
         cardsHome.innerHTML += `<div class="col-3 rounded border border-0 cardsAltroCheTiPiace">
@@ -198,61 +197,86 @@ let play = false
 let progress_bar_interval
 
 function avviaBrano(preview) {
-  
-  
-  
+
+
+
   play = !play
-      
-      if (play) {
 
-          let n = 0
-          
-          progress_bar_interval = setInterval(function () {
+  if (play) {
 
-              document.getElementById('artistPlayer_album_coda').style.opacity= '1'
-              document.getElementById('artistPlayer_album_coda').classList.add('artistPlayer')
-              document.getElementById('progress_audio').style.width = `${n * (100 / 30)}%`
-              document.getElementById('start_traccia').innerText = "0:" + (n < 10 ? "0" + n : n)
-              n++
-              if (n > 30) {
-                  clearInterval(progress_bar_interval)
-                  document.getElementById('artistPlayer_album_coda').style.opacity= '0'
-                  document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
-                  document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+    let n = 0
+
+    progress_bar_interval = setInterval(function () {
+
+      document.getElementById('artistPlayer_album_coda').style.display = 'block'
+      document.getElementById('artistPlayer_album_coda').classList.add('artistPlayer')
+      document.getElementById('progress_audio').style.width = `${n * (100 / 30)}%`
+      document.getElementById('start_traccia').innerText = "0:" + (n < 10 ? "0" + n : n)
+      n++
+      if (n > 30) {
+        clearInterval(progress_bar_interval)
+        document.getElementById('artistPlayer_album_coda').style.display = 'none'
+        document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
+        document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
           `
-                  document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
-                  document.getElementById('text-animation_album').classList.remove('text-animation')
-                  document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
-              }
-
-          }, 1000)
-
-
-          document.getElementById('artistPlayer_album_coda').style.opacity= '1'
-          document.getElementById('artistPlayer_album_coda').classList.add('artistPlayer')
-          document.getElementById('container-scroll-text').classList.add('container-scroll-text')
-          document.getElementById('text-animation_album').classList.add('text-animation')
-          document.getElementById('artistPlayer_album').classList.add('artistPlayer')
-          document.getElementById('container_play').innerHTML = `<path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>`
-          document.getElementById('audio').innerHTML = `<audio controls autoplay>
-                                                          <source src='${preview}' type="audio/mpeg">
-                                                      </audio>`
-      } else {
-          document.getElementById('audio').innerHTML = ''
-          document.getElementById('artistPlayer_album_coda').style.opacity= '0'
-          document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
-          document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
-          document.getElementById('text-animation_album').classList.remove('text-animation')
-          document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
-          console.log(progress_bar_interval)
-          clearInterval(progress_bar_interval)
-          console.log(document.getElementById('container_play'))
-          document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
-          `
+        document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
+        document.getElementById('text-animation_album').classList.remove('text-animation')
+        document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
+        document.getElementById('progress_audio').style.width = `0%`
       }
 
+    }, 1000)
 
 
-  
+    document.getElementById('artistPlayer_album_coda').style.display = 'block'
+    document.getElementById('artistPlayer_album_coda').classList.add('artistPlayer')
+    document.getElementById('container-scroll-text').classList.add('container-scroll-text')
+    document.getElementById('text-animation_album').classList.add('text-animation')
+    document.getElementById('artistPlayer_album').classList.add('artistPlayer')
+    document.getElementById('container_play').innerHTML = `<path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>`
+    document.getElementById('audio').innerHTML = `<audio controls autoplay>
+                                                          <source src='${preview}' type="audio/mpeg">
+                                                      </audio>`
+  } else {
+    document.getElementById('audio').innerHTML = ''
+    document.getElementById('artistPlayer_album_coda').style.display = 'none'
+    document.getElementById('artistPlayer_album_coda').classList.remove('artistPlayer')
+    document.getElementById('container-scroll-text').classList.remove('container-scroll-text')
+    document.getElementById('text-animation_album').classList.remove('text-animation')
+    document.getElementById('artistPlayer_album').classList.remove('artistPlayer')
+    console.log(progress_bar_interval)
+    clearInterval(progress_bar_interval)
+    console.log(document.getElementById('container_play'))
+    document.getElementById('container_play').innerHTML = `<path id="simbolo_play" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+          `
+  }
+
+
+
+
 
 }
+
+let i_like_it = false
+function like(){
+  i_like_it = !i_like_it
+  if(i_like_it){
+    document.querySelector('.bi-heart-fill').classList.add('color_heart')
+  }
+  else{
+    document.querySelector('.bi-heart-fill').classList.remove('color_heart')
+  }
+  console.log(i_like_it)
+  
+  
+}
+
+var toggleBtn = document.getElementById('toggle-btn');
+    toggleBtn.onclick = function() {
+        this.classList.toggle('toggle-btn--dark');
+        document.body.classList.toggle('light-mode');
+        document.querySelector('.sidebar-amici').classList.toggle('light-mode');
+        document.querySelector('.sidebar').classList.toggle('light-mode');
+        document.querySelector('.container-annunci').classList.toggle('light-mode');
+        document.querySelector('.player').classList.toggle('light-mode');
+    };
